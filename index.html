@@ -83,6 +83,22 @@
     var d = new Date(iso + "T12:00:00");
     return isNaN(d) ? iso : d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
   }
+  function ago(iso) {
+    var d = new Date(iso + "T00:00:00");
+    if (isNaN(d)) return null;
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var n = Math.round((today - d) / DAY);
+    return n <= 0 ? "today" : n === 1 ? "yesterday" : n + " days ago";
+  }
+  function foundKey(r) { return r.found_at || r.first_seen || ""; }
+  function found(r) {
+    var t = r.found_at ? new Date(r.found_at) : null;
+    if (t && !isNaN(t)) {
+      return t.toLocaleString("en-US", { timeZone: "America/New_York", month: "short", day: "numeric",
+        hour: "numeric", minute: "2-digit" });
+    }
+    return day(r.first_seen);
+  }
   function isUrgent(r) {
     if (r.owner_direct) return true;
     if (!r.listed) return false;
@@ -135,7 +151,10 @@
     var meta = el("dl", "meta");
     function row(k, v) { meta.appendChild(el("dt", null, k)); meta.appendChild(el("dd", null, v)); }
     if (r.available) row("Available", day(r.available));
-    if (r.listed) row("Listed", day(r.listed));
+    if (r.listed) row("Published", day(r.listed) + (ago(r.listed) ? " · " + ago(r.listed) : ""));
+    else row("Published", "Unknown");
+    var f = found(r);
+    if (f) row("Found", f);
     row("Fee", r.no_fee === true ? "No fee ✓" : r.no_fee === false ? "Broker fee" : "Unknown");
     b.appendChild(meta);
 
@@ -165,14 +184,12 @@
             day: "numeric", hour: "numeric", minute: "2-digit" }) + " NY time"
         : "unknown");
       var rows = (feed.listings || []).map(function (r, i) { r._urgent = isUrgent(r); r._i = i; return r; });
-      rows.sort(function (a, b) {
-        if (a._urgent !== b._urgent) return a._urgent ? -1 : 1;
-        var fs = (b.first_seen || "").localeCompare(a.first_seen || "");
-        return fs || a._i - b._i;
+      rows.sort(function (a, b) {  // newest pull first; feed order (strongest first) within a pull
+        return foundKey(b).localeCompare(foundKey(a)) || a._i - b._i;
       });
       if (!rows.length) return state("No listings yet.");
       list.textContent = "";
-      checked.textContent += " · " + rows.length + " listings";
+      checked.textContent += " · " + rows.length + " listings, newest found first";
       rows.forEach(function (r) { list.appendChild(card(r)); });
     })
     .catch(function () { checked.textContent = ""; state("Couldn't load listings. Pull to refresh."); });
