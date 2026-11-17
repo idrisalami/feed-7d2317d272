@@ -1,6 +1,62 @@
 {
- "checked_at": "2026-11-17T23:06:17+00:00",
+ "checked_at": "2026-11-17T23:09:04+00:00",
  "listings": [
+  {
+   "path": "fb/1705069287988312",
+   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1705069287988312/",
+   "address": "40th St & 8th Ave",
+   "area": "Midtown West",
+   "rent": 2960,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": null,
+   "sqft": null,
+   "available": null,
+   "listed": "2026-11-16",
+   "walk_min": null,
+   "no_fee": true,
+   "owner_direct": null,
+   "urgent": true,
+   "amenities": [
+    "Furnished"
+   ],
+   "photo": null,
+   "unknowns": [
+    "available date unknown"
+   ],
+   "first_seen": "2026-11-17",
+   "found_at": "2026-11-17T23:09:31+00:00",
+   "source": "facebook",
+   "stay": "min 1 month · utilities included"
+  },
+  {
+   "path": "fb/1700036661824908",
+   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1700036661824908/",
+   "address": "40th St & 8th Ave",
+   "area": "Times Square",
+   "rent": 3275,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": null,
+   "sqft": null,
+   "available": null,
+   "listed": "2026-11-15",
+   "walk_min": null,
+   "no_fee": true,
+   "owner_direct": null,
+   "urgent": false,
+   "amenities": [
+    "Furnished"
+   ],
+   "photo": null,
+   "unknowns": [
+    "available date unknown"
+   ],
+   "first_seen": "2026-11-17",
+   "found_at": "2026-11-17T23:09:31+00:00",
+   "source": "facebook",
+   "stay": "min 1 month · utilities included"
+  },
   {
    "path": "/building/221-west-21-street-new_york/2c",
    "url": "https://streeteasy.com/building/221-west-21-street-new_york/2c",
