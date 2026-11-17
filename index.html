@@ -11,13 +11,13 @@
   :root {
     --bg: #f4f4f1; --card: #ffffff; --text: #1b1b1a; --muted: #6d6d68; --line: #e3e3de;
     --accent: #1f6f5c; --accent-text: #ffffff; --chip: #eeeeea; --hot: #c2410c; --hot-bg: #fff1e8;
-    --drop: #15803d;
+    --drop: #15803d; --fb: #1d4ed8; --fb-bg: #e8efff;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #121212; --card: #1d1d1c; --text: #ededea; --muted: #9a9a94; --line: #2e2e2c;
       --accent: #3aa58a; --accent-text: #0d1f1a; --chip: #2a2a28; --hot: #fb923c; --hot-bg: #3a2417;
-      --drop: #4ade80;
+      --drop: #4ade80; --fb: #93b4ff; --fb-bg: #1c2540;
     }
   }
   * { box-sizing: border-box; }
@@ -43,6 +43,7 @@
   .rent .dropped { color: var(--drop); }
   .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
   .badge { font-size: 13px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: var(--hot-bg); color: var(--hot); }
+  .badge.fb { background: var(--fb-bg); color: var(--fb); }
   .facts { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 10px 0 0; font-size: 15px; }
   .facts span { white-space: nowrap; }
   .meta { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 10px 0 0; font-size: 14px; }
@@ -121,11 +122,12 @@
       img.referrerPolicy = "no-referrer";
       img.onerror = function () { var ph = el("div", "photo nophoto", "No photo"); img.replaceWith(ph); };
       c.appendChild(img);
-    } else {
+    } else if (r.source !== "facebook") {  // Facebook posts have no photo: skip the empty box
       c.appendChild(el("div", "photo nophoto", "No photo"));
     }
     var b = el("div", "body");
     var badges = el("div", "badges");
+    if (r.source === "facebook") badges.appendChild(el("span", "badge fb", "🛋️ Short stay · Facebook"));
     if (r._urgent) badges.appendChild(el("span", "badge", r.owner_direct ? "🔥 Owner direct" : "🔥 Just listed"));
     if (badges.childNodes.length) b.appendChild(badges);
 
@@ -151,6 +153,7 @@
     var meta = el("dl", "meta");
     function row(k, v) { meta.appendChild(el("dt", null, k)); meta.appendChild(el("dd", null, v)); }
     if (r.available) row("Available", day(r.available));
+    if (r.stay) row("Stay", r.stay);
     if (r.listed) row("Published", day(r.listed) + (ago(r.listed) ? " · " + ago(r.listed) : ""));
     else row("Published", "Unknown");
     var f = found(r);
@@ -165,9 +168,10 @@
     }
     if (r.unknowns && r.unknowns.length) b.appendChild(el("div", "unknown", "Unknown: " + r.unknowns.join(", ")));
 
-    var url = r.url && safeUrl(r.url, "streeteasy.com");
+    var fb = r.source === "facebook";
+    var url = r.url && safeUrl(r.url, fb ? "www.facebook.com" : "streeteasy.com");
     if (url) {
-      var a = el("a", "open", "Open on StreetEasy");
+      var a = el("a", "open", fb ? "Open the post on Facebook" : "Open on StreetEasy");
       a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
       b.appendChild(a);
     }
