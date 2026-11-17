@@ -1,6 +1,38 @@
 {
- "checked_at": "2026-11-17T14:13:02+00:00",
+ "checked_at": "2026-11-17T18:06:50+00:00",
  "listings": [
+  {
+   "path": "/building/mabel-335-8th-avenue-new_york/429",
+   "url": "https://streeteasy.com/building/mabel-335-8th-avenue-new_york/429",
+   "address": "335 8th Avenue #429",
+   "area": "Chelsea",
+   "rent": 4956,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-11",
+   "listed": "2026-08-24",
+   "walk_min": 11,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Fireplace",
+    "Private outdoor space",
+    "Washer dryer",
+    "Bike room",
+    "Concierge"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/cf990559a7ecb0ef98a5d764c76519ae-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-17",
+   "found_at": "2026-11-17T18:09:17+00:00"
+  },
   {
    "path": "/building/mabel-335-8th-avenue-new_york/513",
    "url": "https://streeteasy.com/building/mabel-335-8th-avenue-new_york/513",
