@@ -1,0 +1,979 @@
+{
+ "checked_at": "2026-11-16T21:00:00-05:00",
+ "listings": [
+  {
+   "path": "/building/3-eleven/1920",
+   "url": "https://streeteasy.com/building/3-eleven/1920",
+   "address": "311 11th Avenue #1920",
+   "area": "West Chelsea",
+   "rent": 4495,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-11",
+   "listed": "2026-11-11",
+   "walk_min": 25,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Washer dryer",
+    "Bike room",
+    "Concierge",
+    "Shared outdoor space",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/fa2a21ad32e827588888a818db3fd7ce-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/429-west-24-street-new_york/5d",
+   "url": "https://streeteasy.com/building/429-west-24-street-new_york/5d",
+   "address": "429 West 24th Street #5D",
+   "area": "West Chelsea",
+   "rent": 4800,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-01",
+   "listed": "2026-10-17",
+   "walk_min": 14,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Fireplace",
+    "Dishwasher",
+    "Furnished",
+    "Hardwood floors",
+    "Elevator",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/f5a8a84e9a15bc80698a79450ff00136-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/art-condominium/5g",
+   "url": "https://streeteasy.com/building/art-condominium/5g",
+   "address": "540 West 28th Street #5G",
+   "area": "West Chelsea",
+   "rent": 4250,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 450,
+   "available": "2026-12-07",
+   "listed": "2026-11-16",
+   "walk_min": 21,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Central ac",
+    "Dishwasher",
+    "View",
+    "Hardwood floors",
+    "Washer dryer",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/cec03bca525baf98f86c1126c96b3e78-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/555-west-23-street-new_york/n4g",
+   "url": "https://streeteasy.com/building/555-west-23-street-new_york/n4g",
+   "address": "555 West 23rd Street #N4G",
+   "area": "West Chelsea",
+   "rent": 4300,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 508,
+   "available": "2026-12-15",
+   "listed": "2026-11-15",
+   "walk_min": 17,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Central ac",
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Bike room",
+    "Concierge"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/0ad08a82b59657f17b5a900db06c34cf-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/433-west-24-street-new_york/2ff",
+   "url": "https://streeteasy.com/building/433-west-24-street-new_york/2ff",
+   "address": "433 West 24th Street #2FF",
+   "area": "West Chelsea",
+   "rent": 4300,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-16",
+   "listed": "2026-11-16",
+   "walk_min": 14,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Dishwasher",
+    "Elevator",
+    "Fios available",
+    "Laundry",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/95ebc1a328e9a2e837b5adf01dea3993-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/marais-520-west-23-street-new_york/rental/5177910",
+   "url": "https://streeteasy.com/building/marais-520-west-23-street-new_york/rental/5177910",
+   "address": "520 West 23rd Street #14D",
+   "area": "West Chelsea",
+   "rent": 4599,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-08",
+   "listed": "2026-10-08",
+   "walk_min": 15,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Dishwasher",
+    "Furnished",
+    "Hardwood floors",
+    "Bike room",
+    "Concierge"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/dc943f4b3980eca582cab71e9bbf9711-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/3-eleven/1020",
+   "url": "https://streeteasy.com/building/3-eleven/1020",
+   "address": "311 11th Avenue #1020",
+   "area": "West Chelsea",
+   "rent": 4295,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-27",
+   "listed": "2026-08-02",
+   "walk_min": 25,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Washer dryer",
+    "Bike room",
+    "Concierge",
+    "Shared outdoor space",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/6c3d29ba1ab07dfce14f5b51cc6bc505-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/555-west-23-street-new_york/n3r",
+   "url": "https://streeteasy.com/building/555-west-23-street-new_york/n3r",
+   "address": "555 West 23rd Street #N3R",
+   "area": "West Chelsea",
+   "rent": 4995,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-01",
+   "listed": "2026-11-01",
+   "walk_min": 17,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Central ac",
+    "Dishwasher",
+    "Private outdoor space",
+    "View",
+    "Hardwood floors",
+    "Bike room"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/9e046003a3435b259ef79ef303fff725-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/the-thomas-eddy/5j",
+   "url": "https://streeteasy.com/building/the-thomas-eddy/5j",
+   "address": "85 8th Avenue #5J",
+   "area": "Chelsea",
+   "rent": 4850,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-01",
+   "listed": "2026-10-14",
+   "walk_min": 1,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Private outdoor space",
+    "Dishwasher",
+    "Hardwood floors",
+    "Bike room",
+    "Shared outdoor space",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/56ac2978e0eda8187e38206d562769bd-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/405-west-23-street-new_york/15a",
+   "url": "https://streeteasy.com/building/405-west-23-street-new_york/15a",
+   "address": "405 West 23rd Street #15A",
+   "area": "West Chelsea",
+   "rent": 4900,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-21",
+   "listed": "2026-11-02",
+   "walk_min": 11,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Bike room",
+    "Doorman",
+    "Elevator",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/a4031e2d9be57821cad03c60a7395828-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/161-west-16-street-new_york/14d",
+   "url": "https://streeteasy.com/building/161-west-16-street-new_york/14d",
+   "address": "161 West 16th Street #14D",
+   "area": "Chelsea",
+   "rent": 5000,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-15",
+   "listed": "2026-11-11",
+   "walk_min": 5,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Bike room",
+    "Doorman",
+    "Elevator"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/44b39271c2c85711ace91be150456f2c-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/433-west-24-street-new_york/rental/5184087",
+   "url": "https://streeteasy.com/building/433-west-24-street-new_york/rental/5184087",
+   "address": "433 West 24th Street #3D",
+   "area": "West Chelsea",
+   "rent": 4995,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-01",
+   "listed": "2026-10-17",
+   "walk_min": 14,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Fireplace",
+    "Dishwasher",
+    "Hardwood floors",
+    "Elevator",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/05dff88aeef8d81de4a56c13d7531c4a-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/20-jane-street-new_york/rental/5196333",
+   "url": "https://streeteasy.com/building/20-jane-street-new_york/rental/5196333",
+   "address": "20 Jane Street #4C",
+   "area": "West Village",
+   "rent": 3500,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-01",
+   "listed": "2026-11-03",
+   "walk_min": 5,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Hardwood floors",
+    "View"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/3fe6b4063b88086b061cd9665de05670-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/25-leroy-street-new_york/rental/5183584",
+   "url": "https://streeteasy.com/building/25-leroy-street-new_york/rental/5183584",
+   "address": "25 Leroy Street #15",
+   "area": "West Village",
+   "rent": 4400,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-13",
+   "listed": "2026-10-15",
+   "walk_min": 18,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Washer dryer",
+    "Bike room",
+    "Fios available",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/c440eceecd5ec2899679a11b780e4ca6-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/344-west-12-street-new_york/1e",
+   "url": "https://streeteasy.com/building/344-west-12-street-new_york/1e",
+   "address": "344 West 12th Street #1E",
+   "area": "West Village",
+   "rent": 3800,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-27",
+   "listed": "2026-10-27",
+   "walk_min": 10,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Fireplace",
+    "Hardwood floors",
+    "Bike room",
+    "Elevator",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/761ee78bee157c5844962084d39061b0-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/165-christopher-street-new_york/lcc",
+   "url": "https://streeteasy.com/building/165-christopher-street-new_york/lcc",
+   "address": "165 Christopher Street #LCC",
+   "area": "West Village",
+   "rent": 3900,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-01",
+   "listed": "2026-10-19",
+   "walk_min": 14,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Bike room",
+    "Shared outdoor space",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/14efa9d6c8f94e7995ab3746c98abe66-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/hallanan-coop/rental/5181321",
+   "url": "https://streeteasy.com/building/hallanan-coop/rental/5181321",
+   "address": "9 Barrow Street #4B",
+   "area": "West Village",
+   "rent": 4500,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 553,
+   "available": "2026-11-02",
+   "listed": "2026-10-14",
+   "walk_min": 15,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Hardwood floors",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/221b6c4226cf50a468a21c317ff9243b-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/100-bank-street-new_york/rental/5193218",
+   "url": "https://streeteasy.com/building/100-bank-street-new_york/rental/5193218",
+   "address": "100 Bank Street #1F",
+   "area": "West Village",
+   "rent": 4500,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-29",
+   "listed": "2026-11-01",
+   "walk_min": 10,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Hardwood floors",
+    "Bike room",
+    "Elevator",
+    "Fios available",
+    "Parking"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/13636ce1b05d993555755ad4d6dc40ae-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/270-west-11-street-new_york/6a",
+   "url": "https://streeteasy.com/building/270-west-11-street-new_york/6a",
+   "address": "270 West 11th Street #6A",
+   "area": "West Village",
+   "rent": 4500,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2027-01-01",
+   "listed": "2026-11-03",
+   "walk_min": 8,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Bike room",
+    "Elevator",
+    "Fios available",
+    "Shared outdoor space",
+    "Laundry",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/2d5d4505a3f8e84f240cb58ecb3f10e7-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/165-christopher-street-new_york/lqq",
+   "url": "https://streeteasy.com/building/165-christopher-street-new_york/lqq",
+   "address": "165 Christopher Street #LQQ",
+   "area": "West Village",
+   "rent": 4500,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-01",
+   "listed": "2026-11-13",
+   "walk_min": 14,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Bike room",
+    "Doorman",
+    "Elevator",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/83a3a958aa480043a1f9663455a18374-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/atrium-160-bleecker-street-new_york/5fww",
+   "url": "https://streeteasy.com/building/atrium-160-bleecker-street-new_york/5fww",
+   "address": "160 Bleecker Street #5FWW",
+   "area": "Greenwich Village",
+   "rent": 4195,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-13",
+   "listed": "2026-10-13",
+   "walk_min": 24,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Laundry",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/0c67b07c6e5c95b896b477955ef5f6b6-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/184-thompson-street-new_york/2p",
+   "url": "https://streeteasy.com/building/184-thompson-street-new_york/2p",
+   "address": "184 Thompson Street #2P",
+   "area": "Greenwich Village",
+   "rent": 4100,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 410,
+   "available": "2026-11-16",
+   "listed": "2026-11-16",
+   "walk_min": 25,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Private outdoor space",
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Loft",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/9bf4a2811a2fdfec50c4c9417ff26428-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/175-bleecker-street-new_york/11",
+   "url": "https://streeteasy.com/building/175-bleecker-street-new_york/11",
+   "address": "175 Bleecker Street #11",
+   "area": "Greenwich Village",
+   "rent": 4200,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 383,
+   "available": "2026-11-04",
+   "listed": "2026-11-04",
+   "walk_min": 23,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Furnished",
+    "Hardwood floors",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/31bd187f9bf6c21fc49b4fd484c0c36c-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/50-54-east-8-street/6c",
+   "url": "https://streeteasy.com/building/50-54-east-8-street/6c",
+   "address": "54 East 8th Street #6C",
+   "area": "Greenwich Village",
+   "rent": 4000,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-15",
+   "listed": "2026-10-23",
+   "walk_min": 22,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Elevator",
+    "Fios available",
+    "Parking"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/dd0aecbbbf3c25986bd1829d171ac6bf-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/24-5-avenue-new_york/627",
+   "url": "https://streeteasy.com/building/24-5-avenue-new_york/627",
+   "address": "24 Fifth Avenue #627",
+   "area": "Greenwich Village",
+   "rent": 4300,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-15",
+   "listed": "2026-11-16",
+   "walk_min": 17,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Bike room",
+    "Concierge",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Gym"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/8b5ed20ccc034b1f9c15e9b4c01f2967-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/184-thompson-street-new_york/2r",
+   "url": "https://streeteasy.com/building/184-thompson-street-new_york/2r",
+   "address": "184 Thompson Street #2R",
+   "area": "Greenwich Village",
+   "rent": 4300,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-29",
+   "listed": "2026-11-11",
+   "walk_min": 25,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Private outdoor space",
+    "Hardwood floors",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/4db835def8a2323fa2c6a12b4121a7bd-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/175-west-12-street-new_york/9n",
+   "url": "https://streeteasy.com/building/175-west-12-street-new_york/9n",
+   "address": "175 West 12th Street #9N",
+   "area": "Greenwich Village",
+   "rent": 4500,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 490,
+   "available": "2026-11-01",
+   "listed": "2026-11-10",
+   "walk_min": 7,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Elevator",
+    "Fios available",
+    "Doorman",
+    "Laundry",
+    "Live in super",
+    "Parking"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/e54af4be24120d953598418d72a7812b-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/village-house-condominium/11e",
+   "url": "https://streeteasy.com/building/village-house-condominium/11e",
+   "address": "60 West 13th Street #11E",
+   "area": "Greenwich Village",
+   "rent": 4950,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 500,
+   "available": "2026-08-13",
+   "listed": "2026-08-16",
+   "walk_min": 11,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Dishwasher",
+    "Furnished",
+    "Hardwood floors",
+    "Bike room",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/3953a0528024a7e25ccd153b140928a0-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/waverly-mews/3i",
+   "url": "https://streeteasy.com/building/waverly-mews/3i",
+   "address": "23 Waverly Place #3I",
+   "area": "Greenwich Village",
+   "rent": 4600,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-15",
+   "listed": "2026-11-14",
+   "walk_min": 23,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Furnished",
+    "Hardwood floors",
+    "Loft",
+    "Shared outdoor space",
+    "Elevator"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/31f339044a8a33e4e74ae3670d5a0e8b-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/the-victoria/17d",
+   "url": "https://streeteasy.com/building/the-victoria/17d",
+   "address": "7 East 14th Street #17D",
+   "area": "Flatiron",
+   "rent": 4995,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-05",
+   "listed": "2026-11-05",
+   "walk_min": 13,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Bike room",
+    "Storage space",
+    "Elevator",
+    "Fios available",
+    "Doorman",
+    "Gym"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/c6a322bec1285106151c54c9fe5843cf-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/the-victoria/222",
+   "url": "https://streeteasy.com/building/the-victoria/222",
+   "address": "7 East 14th Street #222",
+   "area": "Flatiron",
+   "rent": 4295,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-01",
+   "listed": "2026-11-06",
+   "walk_min": 13,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Bike room",
+    "Storage space",
+    "Elevator",
+    "Fios available",
+    "Doorman",
+    "Gym"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/56df3612eec2c7a1c96887fd3ee76236-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "path": "/building/ruby-chelsea/n19p",
+   "url": "https://streeteasy.com/building/ruby-chelsea/n19p",
+   "address": "244 West 29th Street #N19P",
+   "area": "Chelsea",
+   "rent": 4785,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-08-07",
+   "listed": "2026-11-03",
+   "walk_min": 14,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Washer dryer",
+    "Bike room",
+    "Childrens playroom",
+    "Concierge",
+    "Shared outdoor space"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/50fdd5a44bf455cf924f5d0f2251efff-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-16"
+  }
+ ]
+}

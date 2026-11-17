@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<title>Apartment finds</title>
+<style>
+  :root {
+    --bg: #f4f4f1; --card: #ffffff; --text: #1b1b1a; --muted: #6d6d68; --line: #e3e3de;
+    --accent: #1f6f5c; --accent-text: #ffffff; --chip: #eeeeea; --hot: #c2410c; --hot-bg: #fff1e8;
+    --drop: #15803d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212; --card: #1d1d1c; --text: #ededea; --muted: #9a9a94; --line: #2e2e2c;
+      --accent: #3aa58a; --accent-text: #0d1f1a; --chip: #2a2a28; --hot: #fb923c; --hot-bg: #3a2417;
+      --drop: #4ade80;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  header { padding: 20px 16px 8px; max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 26px; margin: 0; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  main { max-width: 640px; margin: 0 auto; padding: 8px 12px 40px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--chip); }
+  .nophoto { display: grid; place-items: center; color: var(--muted); font-size: 14px; }
+  .body { padding: 12px 14px 14px; }
+  .top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .top > div:first-child { min-width: 0; }
+  .addr { font-weight: 650; font-size: 17px; line-height: 1.25; }
+  .area { color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .rent { font-weight: 700; font-size: 20px; white-space: nowrap; text-align: right; }
+  .rent s { display: block; color: var(--muted); font-weight: 400; font-size: 14px; }
+  .rent .dropped { color: var(--drop); }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .badge { font-size: 13px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: var(--hot-bg); color: var(--hot); }
+  .facts { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 10px 0 0; font-size: 15px; }
+  .facts span { white-space: nowrap; }
+  .meta { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 10px 0 0; font-size: 14px; }
+  .meta dt { color: var(--muted); }
+  .meta dd { margin: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .chip { font-size: 13px; padding: 3px 9px; border-radius: 999px; background: var(--chip); }
+  .unknown { color: var(--muted); font-size: 13px; margin-top: 10px; }
+  .open {
+    display: block; margin-top: 12px; padding: 12px; border-radius: 10px; text-align: center;
+    background: var(--accent); color: var(--accent-text); font-weight: 650; text-decoration: none;
+  }
+  .state { color: var(--muted); text-align: center; padding: 40px 16px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Apartment finds</h1>
+  <div class="sub" id="checked">Loading…</div>
+</header>
+<main id="list" aria-live="polite"></main>
+<script>
+(function () {
+  "use strict";
+  var DAY = 86400000;
+  var list = document.getElementById("list");
+  var checked = document.getElementById("checked");
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function money(v) { return typeof v === "number" ? "$" + v.toLocaleString("en-US") : "Rent unknown"; }
+  function day(iso) {
+    if (!iso) return null;
+    var d = new Date(iso + "T12:00:00");
+    return isNaN(d) ? iso : d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  }
+  function isUrgent(r) {
+    if (r.owner_direct) return true;
+    if (!r.listed) return false;
+    var listed = new Date(r.listed + "T00:00:00");
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    return (today - listed) / DAY < 2;
+  }
+  function safeUrl(u, host) {
+    try { var x = new URL(u); return x.protocol === "https:" && (!host || x.hostname === host) ? x.href : null; }
+    catch (e) { return null; }
+  }
+  function state(text) { list.textContent = ""; list.appendChild(el("p", "state", text)); }
+
+  function card(r) {
+    var c = el("article", "card");
+    var photo = r.photo && safeUrl(r.photo);
+    if (photo) {
+      var img = el("img", "photo");
+      img.src = photo; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
+      img.referrerPolicy = "no-referrer";
+      img.onerror = function () { var ph = el("div", "photo nophoto", "No photo"); img.replaceWith(ph); };
+      c.appendChild(img);
+    } else {
+      c.appendChild(el("div", "photo nophoto", "No photo"));
+    }
+    var b = el("div", "body");
+    var badges = el("div", "badges");
+    if (r._urgent) badges.appendChild(el("span", "badge", r.owner_direct ? "🔥 Owner direct" : "🔥 Just listed"));
+    if (badges.childNodes.length) b.appendChild(badges);
+
+    var top = el("div", "top");
+    var left = el("div");
+    left.appendChild(el("div", "addr", r.address || "Address unknown"));
+    if (r.area) left.appendChild(el("div", "area", r.area));
+    top.appendChild(left);
+    var rent = el("div", "rent");
+    var dropped = typeof r.prev_rent === "number" && typeof r.rent === "number" && r.prev_rent > r.rent;
+    if (dropped) rent.appendChild(el("s", null, money(r.prev_rent)));
+    rent.appendChild(el("span", dropped ? "dropped" : null, money(r.rent)));
+    top.appendChild(rent);
+    b.appendChild(top);
+
+    var facts = el("div", "facts");
+    if (r.beds != null) facts.appendChild(el("span", null, r.beds === 0 ? "Studio" : r.beds + " BR"));
+    if (r.baths != null) facts.appendChild(el("span", null, r.baths + " bath"));
+    if (r.sqft != null) facts.appendChild(el("span", null, r.sqft.toLocaleString("en-US") + " ft²"));
+    if (r.walk_min != null) facts.appendChild(el("span", null, "~" + r.walk_min + " min walk"));
+    if (facts.childNodes.length) b.appendChild(facts);
+
+    var meta = el("dl", "meta");
+    function row(k, v) { meta.appendChild(el("dt", null, k)); meta.appendChild(el("dd", null, v)); }
+    if (r.available) row("Available", day(r.available));
+    if (r.listed) row("Listed", day(r.listed));
+    row("Fee", r.no_fee === true ? "No fee ✓" : r.no_fee === false ? "Broker fee" : "Unknown");
+    b.appendChild(meta);
+
+    if (r.amenities && r.amenities.length) {
+      var chips = el("div", "chips");
+      r.amenities.forEach(function (a) { chips.appendChild(el("span", "chip", a)); });
+      b.appendChild(chips);
+    }
+    if (r.unknowns && r.unknowns.length) b.appendChild(el("div", "unknown", "Unknown: " + r.unknowns.join(", ")));
+
+    var url = r.url && safeUrl(r.url, "streeteasy.com");
+    if (url) {
+      var a = el("a", "open", "Open on StreetEasy");
+      a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      b.appendChild(a);
+    }
+    c.appendChild(b);
+    return c;
+  }
+
+  fetch("listings.json", { cache: "no-store" })
+    .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
+    .then(function (feed) {
+      var when = feed.checked_at ? new Date(feed.checked_at) : null;
+      checked.textContent = "Last checked " + (when && !isNaN(when)
+        ? when.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short",
+            day: "numeric", hour: "numeric", minute: "2-digit" }) + " NY time"
+        : "unknown");
+      var rows = (feed.listings || []).map(function (r, i) { r._urgent = isUrgent(r); r._i = i; return r; });
+      rows.sort(function (a, b) {
+        if (a._urgent !== b._urgent) return a._urgent ? -1 : 1;
+        var fs = (b.first_seen || "").localeCompare(a.first_seen || "");
+        return fs || a._i - b._i;
+      });
+      if (!rows.length) return state("No listings yet.");
+      list.textContent = "";
+      checked.textContent += " · " + rows.length + " listings";
+      rows.forEach(function (r) { list.appendChild(card(r)); });
+    })
+    .catch(function () { checked.textContent = ""; state("Couldn't load listings. Pull to refresh."); });
+})();
+</script>
+</body>
+</html>
