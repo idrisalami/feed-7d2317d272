@@ -57,6 +57,20 @@
     background: var(--accent); color: var(--accent-text); font-weight: 650; text-decoration: none;
   }
   .state { color: var(--muted); text-align: center; padding: 40px 16px; }
+  .tabs {
+    position: sticky; top: 0; z-index: 1; background: var(--bg);
+    max-width: 640px; margin: 0 auto; padding: 8px 12px; display: flex; gap: 8px;
+  }
+  .tabs[hidden] { display: none; }
+  .tab {
+    flex: 1; font: inherit; font-size: 15px; font-weight: 600; padding: 9px 10px; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--card); color: var(--text); cursor: pointer;
+  }
+  .tab .n { color: var(--muted); font-weight: 500; }
+  .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  .tab[aria-selected="true"] .n { color: inherit; opacity: 0.8; }
+  .note { font-size: 14px; color: var(--fb); background: var(--fb-bg); border-radius: 10px; padding: 10px 12px; }
+  .hint { color: var(--muted); font-size: 13px; padding: 0 2px; }
 </style>
 </head>
 <body>
@@ -64,13 +78,27 @@
   <h1>Apartment finds</h1>
   <div class="sub" id="checked">Loading…</div>
 </header>
-<main id="list" aria-live="polite"></main>
+<nav class="tabs" role="tablist" aria-label="Listing type" hidden>
+  <button class="tab" role="tab" id="tab-apartments" aria-controls="list" data-tab="apartments">Apartments <span class="n"></span></button>
+  <button class="tab" role="tab" id="tab-short" aria-controls="list" data-tab="short-stays">Short stays <span class="n"></span></button>
+</nav>
+<main id="list" role="tabpanel" aria-live="polite"></main>
 <script>
 (function () {
   "use strict";
   var DAY = 86400000;
   var list = document.getElementById("list");
   var checked = document.getElementById("checked");
+  var tabsBar = document.querySelector(".tabs");
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+  var TABS = {
+    "apartments": { test: function (r) { return r.source !== "facebook"; },
+      empty: "No apartments yet." },
+    "short-stays": { test: function (r) { return r.source === "facebook"; },
+      empty: "No short stays yet. Facebook groups are checked once a day.",
+      note: "Short stays from Facebook groups, newest found first. Confirm a post is real before paying anything." }
+  };
+  var rows = [];
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -179,6 +207,39 @@
     return c;
   }
 
+  function current() { return location.hash === "#short-stays" ? "short-stays" : "apartments"; }
+  function render() {
+    var name = current(), t = TABS[name];
+    tabs.forEach(function (b) {
+      var on = b.getAttribute("data-tab") === name;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+      if (on) list.setAttribute("aria-labelledby", b.id);
+    });
+    var shown = rows.filter(t.test);
+    list.textContent = "";
+    if (t.note) list.appendChild(el("p", "note", t.note));
+    else if (shown.length) list.appendChild(el("p", "hint", "Newest found first"));
+    if (!shown.length) { list.appendChild(el("p", "state", t.empty)); return; }
+    shown.forEach(function (r) { list.appendChild(card(r)); });
+  }
+  tabs.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var name = b.getAttribute("data-tab");
+      history.replaceState(null, "", name === "apartments" ? location.pathname + location.search : "#" + name);
+      render();
+      window.scrollTo(0, 0);
+    });
+  });
+  tabsBar.addEventListener("keydown", function (e) {
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+    var i = tabs.indexOf(document.activeElement);
+    if (i < 0) return;
+    var next = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
+    next.focus(); next.click();
+  });
+  window.addEventListener("hashchange", render);
+
   fetch("listings.json", { cache: "no-store" })
     .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
     .then(function (feed) {
@@ -187,14 +248,15 @@
         ? when.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short",
             day: "numeric", hour: "numeric", minute: "2-digit" }) + " NY time"
         : "unknown");
-      var rows = (feed.listings || []).map(function (r, i) { r._urgent = isUrgent(r); r._i = i; return r; });
+      rows = (feed.listings || []).map(function (r, i) { r._urgent = isUrgent(r); r._i = i; return r; });
       rows.sort(function (a, b) {  // newest pull first; feed order (strongest first) within a pull
         return foundKey(b).localeCompare(foundKey(a)) || a._i - b._i;
       });
-      if (!rows.length) return state("No listings yet.");
-      list.textContent = "";
-      checked.textContent += " · " + rows.length + " listings, newest found first";
-      rows.forEach(function (r) { list.appendChild(card(r)); });
+      tabs.forEach(function (b) {
+        b.querySelector(".n").textContent = String(rows.filter(TABS[b.getAttribute("data-tab")].test).length);
+      });
+      tabsBar.hidden = false;
+      render();
     })
     .catch(function () { checked.textContent = ""; state("Couldn't load listings. Pull to refresh."); });
 })();
