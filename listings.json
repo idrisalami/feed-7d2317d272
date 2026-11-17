@@ -1,6 +1,38 @@
 {
- "checked_at": "2026-11-17T18:06:50+00:00",
+ "checked_at": "2026-11-17T23:06:17+00:00",
  "listings": [
+  {
+   "path": "/building/221-west-21-street-new_york/2c",
+   "url": "https://streeteasy.com/building/221-west-21-street-new_york/2c",
+   "address": "221 West 21st Street #2C",
+   "area": "Chelsea",
+   "rent": 4550,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-05",
+   "listed": "2026-11-17",
+   "walk_min": 8,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Central ac",
+    "Dishwasher",
+    "Fireplace",
+    "View",
+    "Hardwood floors",
+    "Bike room"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/283a5b03c05728c0cde5e8a80061e2f1-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-17",
+   "found_at": "2026-11-17T23:08:58+00:00"
+  },
   {
    "path": "/building/mabel-335-8th-avenue-new_york/429",
    "url": "https://streeteasy.com/building/mabel-335-8th-avenue-new_york/429",
