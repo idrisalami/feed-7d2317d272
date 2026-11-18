@@ -1,6 +1,38 @@
 {
- "checked_at": "2026-11-18T18:06:45+00:00",
+ "checked_at": "2026-11-18T23:07:22+00:00",
  "listings": [
+  {
+   "path": "/building/459-hudson-street-new_york/rental/5206908",
+   "url": "https://streeteasy.com/building/459-hudson-street-new_york/rental/5206908",
+   "address": "459 Hudson Street #2A",
+   "area": "West Village",
+   "rent": 4995,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-18",
+   "listed": "2026-11-18",
+   "walk_min": 16,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "View",
+    "Dishwasher",
+    "Fireplace",
+    "Hardwood floors",
+    "Fios available",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/c19914b3a4f598a4ab40ac0b70fefa61-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-18",
+   "found_at": "2026-11-18T23:10:17+00:00"
+  },
   {
    "path": "/building/ruby-chelsea/n14k",
    "url": "https://streeteasy.com/building/ruby-chelsea/n14k",
@@ -924,8 +956,8 @@
    "url": "https://streeteasy.com/building/165-christopher-street-new_york/lqq",
    "address": "165 Christopher Street #LQQ",
    "area": "West Village",
-   "rent": 4500,
-   "prev_rent": null,
+   "rent": 4000,
+   "prev_rent": 4500,
    "beds": 0,
    "baths": 1.0,
    "sqft": null,
