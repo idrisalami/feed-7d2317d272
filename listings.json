@@ -1,6 +1,69 @@
 {
- "checked_at": "2026-11-17T23:09:04+00:00",
+ "checked_at": "2026-11-18T14:08:04+00:00",
  "listings": [
+  {
+   "path": "/building/47_-49-morton-street-new_york/5e",
+   "url": "https://streeteasy.com/building/47_-49-morton-street-new_york/5e",
+   "address": "47 Morton Street #5E",
+   "area": "West Village",
+   "rent": 4350,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-11",
+   "listed": "2026-11-11",
+   "walk_min": 17,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Central ac",
+    "View",
+    "Hardwood floors",
+    "Elevator",
+    "Fios available",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/bbd06e949542676c5ae6845480db9d6e-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-18",
+   "found_at": "2026-11-18T14:11:01+00:00"
+  },
+  {
+   "path": "/building/517-west-29th/2g",
+   "url": "https://streeteasy.com/building/517-west-29th/2g",
+   "address": "517 West 29th Street #2G",
+   "area": "West Chelsea",
+   "rent": 4550,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 454,
+   "available": "2026-11-15",
+   "listed": "2026-11-17",
+   "walk_min": 22,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Central ac",
+    "Dishwasher",
+    "Furnished",
+    "View",
+    "Hardwood floors",
+    "Washer dryer"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/79a0b4346a9f84b634589d3d218ba46b-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-18",
+   "found_at": "2026-11-18T14:11:01+00:00"
+  },
   {
    "path": "fb/1705069287988312",
    "url": "https://www.facebook.com/groups/1285707596591152/permalink/1705069287988312/",
