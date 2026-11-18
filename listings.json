@@ -1,6 +1,36 @@
 {
- "checked_at": "2026-11-18T14:08:04+00:00",
+ "checked_at": "2026-11-18T14:11:08+00:00",
  "listings": [
+  {
+   "path": "fb/1706792014482706",
+   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1706792014482706/",
+   "address": null,
+   "area": "Midtown West",
+   "rent": 2900,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": null,
+   "sqft": null,
+   "available": null,
+   "listed": "2026-11-18",
+   "walk_min": null,
+   "no_fee": null,
+   "owner_direct": null,
+   "urgent": true,
+   "amenities": [
+    "Furnished"
+   ],
+   "photo": null,
+   "unknowns": [
+    "location unknown",
+    "available date unknown",
+    "stay length unknown"
+   ],
+   "first_seen": "2026-11-18",
+   "found_at": "2026-11-18T14:11:34+00:00",
+   "source": "facebook",
+   "stay": "utilities included"
+  },
   {
    "path": "/building/47_-49-morton-street-new_york/5e",
    "url": "https://streeteasy.com/building/47_-49-morton-street-new_york/5e",
