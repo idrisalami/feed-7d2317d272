@@ -1,6 +1,38 @@
 {
- "checked_at": "2026-11-18T14:11:08+00:00",
+ "checked_at": "2026-11-18T18:06:45+00:00",
  "listings": [
+  {
+   "path": "/building/ruby-chelsea/n14k",
+   "url": "https://streeteasy.com/building/ruby-chelsea/n14k",
+   "address": "244 West 29th Street #N14K",
+   "area": "Chelsea",
+   "rent": 4590,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-09-26",
+   "listed": "2026-11-03",
+   "walk_min": 14,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Washer dryer",
+    "Bike room",
+    "Childrens playroom",
+    "Concierge",
+    "Shared outdoor space"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/281a615eb4897d2b1455b0204caf85bc-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-18",
+   "found_at": "2026-11-18T18:09:39+00:00"
+  },
   {
    "path": "fb/1706792014482706",
    "url": "https://www.facebook.com/groups/1285707596591152/permalink/1706792014482706/",
