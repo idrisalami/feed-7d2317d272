@@ -1,6 +1,99 @@
 {
- "checked_at": "2026-11-18T23:07:22+00:00",
+ "checked_at": "2026-11-19T14:08:09+00:00",
  "listings": [
+  {
+   "path": "/building/chatham-in-chelsea/2d",
+   "url": "https://streeteasy.com/building/chatham-in-chelsea/2d",
+   "address": "445 West 19th Street #2D",
+   "area": "West Chelsea",
+   "rent": 4350,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2027-01-01",
+   "listed": "2026-11-18",
+   "walk_min": 10,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "View",
+    "Dishwasher",
+    "Private outdoor space",
+    "Hardwood floors",
+    "Bike room",
+    "Shared outdoor space"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/404fe16b02c0dba648f82a53a5e812c8-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-19",
+   "found_at": "2026-11-19T14:12:00+00:00"
+  },
+  {
+   "path": "/building/254-pas/6m",
+   "url": "https://streeteasy.com/building/254-pas/6m",
+   "address": "254 Park Avenue South #6M",
+   "area": "Flatiron",
+   "rent": 5000,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 500,
+   "available": "2026-11-10",
+   "listed": "2026-11-10",
+   "walk_min": 19,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Concierge",
+    "Elevator",
+    "Fios available",
+    "Doorman",
+    "Gym",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/768dfde3a5ab1ffce2bf2dfdba880a81-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-19",
+   "found_at": "2026-11-19T14:12:00+00:00"
+  },
+  {
+   "path": "/building/53-morton-street-new_york/4a",
+   "url": "https://streeteasy.com/building/53-morton-street-new_york/4a",
+   "address": "55 Morton Street #4A",
+   "area": "West Village",
+   "rent": 4995,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-19",
+   "listed": "2026-11-19",
+   "walk_min": 17,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "View",
+    "Elevator",
+    "Fios available",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/46ea98fde02c92c1306dd73a239c3070-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-19",
+   "found_at": "2026-11-19T14:12:00+00:00"
+  },
   {
    "path": "/building/459-hudson-street-new_york/rental/5206908",
    "url": "https://streeteasy.com/building/459-hudson-street-new_york/rental/5206908",
