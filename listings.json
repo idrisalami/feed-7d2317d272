@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-19T23:06:49+00:00",
+ "checked_at": "2026-11-20T14:07:48+00:00",
  "listings": [
   {
    "path": "/building/250-west-15-street-new_york/rental/5183791",
@@ -870,8 +870,8 @@
    "url": "https://streeteasy.com/building/433-west-24-street-new_york/rental/5184087",
    "address": "433 West 24th Street #3D",
    "area": "West Chelsea",
-   "rent": 4995,
-   "prev_rent": null,
+   "rent": 4795,
+   "prev_rent": 4995,
    "beds": 1,
    "baths": 1.0,
    "sqft": null,
