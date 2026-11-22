@@ -1,6 +1,99 @@
 {
- "checked_at": "2026-11-20T14:10:36+00:00",
+ "checked_at": "2026-11-22T23:52:00+00:00",
  "listings": [
+  {
+   "path": "/building/88-horatio-street-new_york/5d",
+   "url": "https://streeteasy.com/building/88-horatio-street-new_york/5d",
+   "address": "88 Horatio Street #5D",
+   "area": "West Village",
+   "rent": 3800,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-15",
+   "listed": "2026-11-20",
+   "walk_min": 9,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Hardwood floors",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/6166da498c48e36d7446f5fcd685c8c1-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-22",
+   "found_at": "2026-11-22T23:54:46+00:00"
+  },
+  {
+   "path": "/building/2-horatio-street-new_york/12f",
+   "url": "https://streeteasy.com/building/2-horatio-street-new_york/12f",
+   "address": "2 Horatio Street #12F",
+   "area": "West Village",
+   "rent": 4900,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-20",
+   "listed": "2026-11-20",
+   "walk_min": 4,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Fireplace",
+    "Hardwood floors",
+    "Bike room",
+    "Doorman",
+    "Elevator"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/97cf3f9f9b89feed267febdbb172211b-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-22",
+   "found_at": "2026-11-22T23:54:46+00:00"
+  },
+  {
+   "path": "/building/221-west-21-street-new_york/1c",
+   "url": "https://streeteasy.com/building/221-west-21-street-new_york/1c",
+   "address": "221 West 21st Street #1C",
+   "area": "Chelsea",
+   "rent": 4750,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2027-01-01",
+   "listed": "2026-11-06",
+   "walk_min": 8,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Central ac",
+    "Fireplace",
+    "Dishwasher",
+    "Private outdoor space",
+    "Hardwood floors",
+    "Bike room"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/d74700b09a00559015aad396436a105c-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-22",
+   "found_at": "2026-11-22T23:54:46+00:00"
+  },
   {
    "path": "fb/3620369411447389",
    "url": "https://www.facebook.com/groups/204548523029512/permalink/3620369411447389/",
