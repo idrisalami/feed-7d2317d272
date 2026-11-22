@@ -1,6 +1,87 @@
 {
- "checked_at": "2026-11-22T23:52:00+00:00",
+ "checked_at": "2026-11-22T23:54:53+00:00",
  "listings": [
+  {
+   "path": "fb/1708987680929806",
+   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1708987680929806/",
+   "address": "W 40th St & 8th Ave",
+   "area": "Times Square",
+   "rent": 2900,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": null,
+   "sqft": null,
+   "available": null,
+   "listed": "2026-11-20",
+   "walk_min": null,
+   "no_fee": null,
+   "owner_direct": null,
+   "urgent": false,
+   "amenities": [],
+   "photo": null,
+   "unknowns": [
+    "available date unknown",
+    "stay length unknown"
+   ],
+   "first_seen": "2026-11-22",
+   "found_at": "2026-11-22T23:55:21+00:00",
+   "source": "facebook",
+   "stay": "utilities included"
+  },
+  {
+   "path": "fb/1707165271112047",
+   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1707165271112047/",
+   "address": "E 13th St & 1st Ave",
+   "area": "East Village",
+   "rent": 3600,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": null,
+   "sqft": null,
+   "available": null,
+   "listed": "2026-11-21",
+   "walk_min": null,
+   "no_fee": null,
+   "owner_direct": null,
+   "urgent": true,
+   "amenities": [],
+   "photo": null,
+   "unknowns": [
+    "available date unknown"
+   ],
+   "first_seen": "2026-11-22",
+   "found_at": "2026-11-22T23:55:21+00:00",
+   "source": "facebook",
+   "stay": "min 1 month · utilities included"
+  },
+  {
+   "path": "fb/28959790533662874",
+   "url": "https://www.facebook.com/groups/750177135050925/permalink/28959790533662874/",
+   "address": "E 109th St & Madison Ave",
+   "area": "East Harlem",
+   "rent": null,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": null,
+   "sqft": null,
+   "available": "2026-12-20",
+   "listed": "2026-11-22",
+   "walk_min": null,
+   "no_fee": null,
+   "owner_direct": null,
+   "urgent": true,
+   "amenities": [
+    "Furnished"
+   ],
+   "photo": null,
+   "unknowns": [
+    "rent unknown"
+   ],
+   "first_seen": "2026-11-22",
+   "found_at": "2026-11-22T23:55:21+00:00",
+   "source": "facebook",
+   "stay": "Dec 20 → Jan 2"
+  },
   {
    "path": "/building/88-horatio-street-new_york/5d",
    "url": "https://streeteasy.com/building/88-horatio-street-new_york/5d",
