@@ -57,6 +57,20 @@
   }
   .state { color: var(--muted); text-align: center; padding: 40px 16px; }
   .hint { color: var(--muted); font-size: 13px; padding: 0 2px; }
+  .tabs { position: sticky; top: 0; z-index: 1; background: var(--bg);
+    max-width: 640px; margin: 0 auto; padding: 8px 12px; display: flex; gap: 8px; }
+  .tab { flex: 1; font: inherit; font-size: 15px; font-weight: 600; padding: 9px 10px; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--card); color: var(--text); cursor: pointer; }
+  .tab .n { color: var(--muted); font-weight: 500; }
+  .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  .tab[aria-selected="true"] .n { color: inherit; opacity: 0.8; }
+  .sources { font-size: 13px; color: var(--muted); background: var(--card); border: 1px solid var(--line);
+    border-radius: 10px; padding: 10px 12px; }
+  .sources ul { margin: 4px 0 0; padding-left: 18px; }
+  .sources .bad { color: var(--hot); }
+  .rent small { display: block; color: var(--muted); font-weight: 400; font-size: 12px; white-space: normal;
+    max-width: 150px; margin-left: auto; line-height: 1.3; }
+  .now { color: var(--drop); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -64,14 +78,20 @@
   <h1>Apartment finds</h1>
   <div class="sub" id="checked">Loading…</div>
 </header>
-<main id="list" aria-live="polite"></main>
+<nav class="tabs" role="tablist" aria-label="Source">
+  <button class="tab" role="tab" id="tab-streeteasy" aria-controls="list" data-tab="streeteasy">StreetEasy <span class="n"></span></button>
+  <button class="tab" role="tab" id="tab-buildings" aria-controls="list" data-tab="buildings">Buildings <span class="n"></span></button>
+</nav>
+<main id="list" role="tabpanel" aria-live="polite"></main>
 <script>
 (function () {
   "use strict";
   var DAY = 86400000;
   var list = document.getElementById("list");
   var checked = document.getElementById("checked");
-  var rows = [];
+  var rows = [], units = [], feeds = { streeteasy: undefined, buildings: undefined };
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+  var HOSTS = { "AvalonBay": "www.avaloncommunities.com", "UDR": "www.udr.com", "Related": "www.relatedrentals.com" };
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -177,28 +197,144 @@
     return c;
   }
 
+  function nyTime(iso) {
+    var when = iso ? new Date(iso) : null;
+    return when && !isNaN(when)
+      ? when.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short",
+          day: "numeric", hour: "numeric", minute: "2-digit" }) + " NY time"
+      : "unknown";
+  }
+
+  function unitCard(r) {
+    var c = el("article", "card");
+    var b = el("div", "body");
+    var top = el("div", "top");
+    var left = el("div");
+    left.appendChild(el("div", "addr", r.building + (r.unit ? (/^[0-9A-Za-z-]+$/.test(r.unit) ? " #" : " · ") + r.unit : "")));
+    left.appendChild(el("div", "area", [r.address, r.landlord].filter(Boolean).join(" · ")));
+    top.appendChild(left);
+    var rent = el("div", "rent");
+    rent.appendChild(el("span", null, money(r.rent)));
+    if (r.rent_note) rent.appendChild(el("small", null, r.rent_note));
+    top.appendChild(rent);
+    b.appendChild(top);
+
+    var facts = el("div", "facts");
+    if (r.beds != null) facts.appendChild(el("span", null, r.beds === 0 ? "Studio" : r.beds + " BR"));
+    if (r.baths != null) facts.appendChild(el("span", null, r.baths + " bath"));
+    facts.appendChild(el("span", null, r.sqft != null ? r.sqft.toLocaleString("en-US") + " ft²" : "Size not listed"));
+    if (r.floor != null) facts.appendChild(el("span", null, "Floor " + r.floor));
+    if (r.walk_min != null) facts.appendChild(el("span", null, "~" + r.walk_min + " min walk"));
+    b.appendChild(facts);
+
+    var meta = el("dl", "meta");
+    function row(k, v, cls) { meta.appendChild(el("dt", null, k)); meta.appendChild(el("dd", cls || null, v)); }
+    if (r.available_now) row("Available", "Now", "now");
+    else row("Available", r.available ? day(r.available) : "Not listed");
+    var f = found(r);
+    if (f) row("Found", f);
+    row("Fee", "Not stated · listed by the landlord");
+    b.appendChild(meta);
+
+    var url = r.url && safeUrl(r.url, HOSTS[r.landlord]);
+    if (url) {
+      var a = el("a", "open", "Open on " + r.landlord + " site");
+      a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      b.appendChild(a);
+    }
+    c.appendChild(b);
+    return c;
+  }
+
+  function sourcesBox(feed) {
+    var box = el("div", "sources");
+    box.appendChild(el("div", null, "Read straight from each landlord's site · studios & 1BR, $3,000–5,000"));
+    var ul = el("ul");
+    (feed.sources || []).forEach(function (s) {
+      var li = s.ok
+        ? el("li", null, s.building + " — " + s.matches + " of " + s.units_listed + " listed units match")
+        : el("li", "bad", s.building + " — couldn't check this time, showing last known units");
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+    return box;
+  }
+
+  function current() { return location.hash === "#buildings" ? "buildings" : "streeteasy"; }
+
   function render() {
+    var name = current();
+    tabs.forEach(function (b) {
+      var on = b.getAttribute("data-tab") === name;
+      b.setAttribute("aria-selected", on ? "true" : "false"); b.tabIndex = on ? 0 : -1;
+      if (on) list.setAttribute("aria-labelledby", b.id);
+    });
+    var feed = feeds[name];
     list.textContent = "";
+    if (feed === undefined) { checked.textContent = "Loading…"; return; }
+    if (feed === null) {
+      checked.textContent = "";
+      state(name === "buildings" ? "Couldn't load building units. Pull to refresh." : "Couldn't load listings. Pull to refresh.");
+      return;
+    }
+    checked.textContent = "Last checked " + nyTime(feed.checked_at);
+    if (name === "buildings") {
+      list.appendChild(sourcesBox(feed));
+      if (!units.length) { list.appendChild(el("p", "state", "No matching units on these sites right now.")); return; }
+      list.appendChild(el("p", "hint", "Newest found first, then cheapest"));
+      units.forEach(function (r) { list.appendChild(unitCard(r)); });
+      return;
+    }
     if (!rows.length) { state("No apartments yet."); return; }
     list.appendChild(el("p", "hint", "Newest found first"));
     rows.forEach(function (r) { list.appendChild(card(r)); });
   }
 
-  fetch("listings.json", { cache: "no-store" })
-    .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
+  function count(name, n) {
+    document.querySelector('.tab[data-tab="' + name + '"] .n').textContent = n == null ? "" : String(n);
+  }
+
+  tabs.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var name = b.getAttribute("data-tab");
+      history.replaceState(null, "", name === "streeteasy" ? location.pathname + location.search : "#" + name);
+      render(); window.scrollTo(0, 0);
+    });
+  });
+  document.querySelector(".tabs").addEventListener("keydown", function (e) {
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+    var i = tabs.indexOf(document.activeElement);
+    if (i < 0) return;
+    var next = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
+    next.focus(); next.click();
+  });
+  window.addEventListener("hashchange", render);
+  render();
+
+  function load(file) {
+    return fetch(file, { cache: "no-store" })
+      .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); });
+  }
+
+  load("listings.json")
     .then(function (feed) {
-      var when = feed.checked_at ? new Date(feed.checked_at) : null;
-      checked.textContent = "Last checked " + (when && !isNaN(when)
-        ? when.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short",
-            day: "numeric", hour: "numeric", minute: "2-digit" }) + " NY time"
-        : "unknown");
       rows = (feed.listings || []).filter(function (r) { return r.source !== "facebook"; }).map(function (r, i) { r._urgent = isUrgent(r); r._i = i; return r; });
       rows.sort(function (a, b) {  // newest pull first; feed order (strongest first) within a pull
         return foundKey(b).localeCompare(foundKey(a)) || a._i - b._i;
       });
-      render();
+      feeds.streeteasy = feed; count("streeteasy", rows.length); render();
     })
-    .catch(function () { checked.textContent = ""; state("Couldn't load listings. Pull to refresh."); });
+    .catch(function () { feeds.streeteasy = null; render(); });
+
+  load("buildings.json")
+    .then(function (feed) {
+      units = (feed.units || []).slice();
+      units.sort(function (a, b) {  // newest pull first, cheapest first within a pull
+        return foundKey(b).localeCompare(foundKey(a)) || (a.rent || 1e9) - (b.rent || 1e9);
+      });
+      feeds.buildings = feed; count("buildings", units.length); render();
+    })
+    .catch(function () { feeds.buildings = null; render(); });
 })();
 </script>
 </body>
