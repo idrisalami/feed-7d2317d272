@@ -1,6 +1,288 @@
 {
- "checked_at": "2026-11-23T18:06:41+00:00",
+ "checked_at": "2026-11-23T23:07:02+00:00",
  "listings": [
+  {
+   "path": "/building/summit-nyc/30c",
+   "url": "https://streeteasy.com/building/summit-nyc/30c",
+   "address": "222 East 44th Street #30C",
+   "area": "Turtle Bay",
+   "rent": 5435,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-12",
+   "listed": "2026-11-12",
+   "walk_min": 47,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Central ac",
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Washer dryer",
+    "Bike room"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/0b6712c25690e32d9a367a5e8cd4198f-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T23:11:55+00:00"
+  },
+  {
+   "path": "/building/3-eleven/1118",
+   "url": "https://streeteasy.com/building/3-eleven/1118",
+   "address": "311 11th Avenue #1118",
+   "area": "West Chelsea",
+   "rent": 5595,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-11",
+   "listed": "2026-11-11",
+   "walk_min": 25,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Washer dryer",
+    "Bike room",
+    "Concierge",
+    "Shared outdoor space",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/f5517fefc2daa93a0f35f54b6712b2ca-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T23:11:55+00:00"
+  },
+  {
+   "path": "/building/3-eleven/2419",
+   "url": "https://streeteasy.com/building/3-eleven/2419",
+   "address": "311 11th Avenue #2419",
+   "area": "West Chelsea",
+   "rent": 5695,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-12",
+   "listed": "2026-11-12",
+   "walk_min": 25,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Washer dryer",
+    "Bike room",
+    "Concierge",
+    "Shared outdoor space",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/f5517fefc2daa93a0f35f54b6712b2ca-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T23:11:55+00:00"
+  },
+  {
+   "path": "/building/59-barrow-street-new_york/onew",
+   "url": "https://streeteasy.com/building/59-barrow-street-new_york/onew",
+   "address": "59 Barrow Street #ONEW",
+   "area": "West Village",
+   "rent": 5495,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-19",
+   "listed": "2026-11-19",
+   "walk_min": 16,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Washer dryer",
+    "Elevator",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/8d08da17d78354545dcc44a3731570c8-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T23:11:55+00:00"
+  },
+  {
+   "path": "/building/59-barrow-street-new_york/one",
+   "url": "https://streeteasy.com/building/59-barrow-street-new_york/one",
+   "address": "59 Barrow Street #ONE",
+   "area": "West Village",
+   "rent": 5495,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-12",
+   "listed": "2026-11-12",
+   "walk_min": 16,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Washer dryer",
+    "Elevator",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/5a31c2468503f669076b1b14bfa1aee2-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T23:11:55+00:00"
+  },
+  {
+   "path": "/building/343-west-12-street-new_york/5b",
+   "url": "https://streeteasy.com/building/343-west-12-street-new_york/5b",
+   "address": "343 West 12th Street #5B",
+   "area": "West Village",
+   "rent": 5500,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-20",
+   "listed": "2026-11-20",
+   "walk_min": 9,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Fireplace",
+    "Dishwasher",
+    "Hardwood floors",
+    "Bike room"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/b9ea630aed71c15c896c69ee8bf53c93-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T23:11:55+00:00"
+  },
+  {
+   "path": "/building/abingdon-court/2b",
+   "url": "https://streeteasy.com/building/abingdon-court/2b",
+   "address": "75 Bank Street #2B",
+   "area": "West Village",
+   "rent": 5395,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-17",
+   "listed": "2026-11-17",
+   "walk_min": 7,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Hardwood floors",
+    "Bike room",
+    "Elevator",
+    "Fios available",
+    "Doorman",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/32bd89ec58c843a01f35af8c5fe0f4bf-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T23:11:55+00:00"
+  },
+  {
+   "path": "/building/300-west-30-street-new_york/rental/5188074",
+   "url": "https://streeteasy.com/building/300-west-30-street-new_york/rental/5188074",
+   "address": "300 West 30th Street #4B",
+   "area": "Chelsea",
+   "rent": 5100,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": 500,
+   "available": "2026-10-22",
+   "listed": "2026-10-22",
+   "walk_min": 14,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Private outdoor space",
+    "Central ac",
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Washer dryer"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/7f05d33ad12c87792df33da9731060fc-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T23:11:55+00:00"
+  },
+  {
+   "path": "/building/300-west-23-street-new_york/rental/5202567",
+   "url": "https://streeteasy.com/building/300-west-23-street-new_york/rental/5202567",
+   "address": "300 West 23rd Street #14M",
+   "area": "Chelsea",
+   "rent": 5500,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-11",
+   "listed": "2026-11-11",
+   "walk_min": 7,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Bike room",
+    "Doorman",
+    "Elevator"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/4dca49528b9b6e31c2e1af719a5480ea-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T23:11:55+00:00"
+  },
   {
    "path": "/building/88-horatio-street-new_york/5d",
    "url": "https://streeteasy.com/building/88-horatio-street-new_york/5d",
