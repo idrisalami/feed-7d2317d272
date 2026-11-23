@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-22T23:54:53+00:00",
+ "checked_at": "2026-11-23T18:06:41+00:00",
  "listings": [
   {
    "path": "/building/88-horatio-street-new_york/5d",
@@ -570,8 +570,8 @@
    "url": "https://streeteasy.com/building/429-west-24-street-new_york/5d",
    "address": "429 West 24th Street #5D",
    "area": "West Chelsea",
-   "rent": 4600,
-   "prev_rent": 4800,
+   "rent": 4500,
+   "prev_rent": 4600,
    "beds": 1,
    "baths": 1.0,
    "sqft": null,
@@ -964,8 +964,8 @@
    "url": "https://streeteasy.com/building/344-west-12-street-new_york/1e",
    "address": "344 West 12th Street #1E",
    "area": "West Village",
-   "rent": 3800,
-   "prev_rent": null,
+   "rent": 3498,
+   "prev_rent": 3800,
    "beds": 0,
    "baths": 1.0,
    "sqft": null,
