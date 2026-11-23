@@ -91,7 +91,7 @@
   var checked = document.getElementById("checked");
   var rows = [], units = [], feeds = { streeteasy: undefined, buildings: undefined };
   var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
-  var HOSTS = { "AvalonBay": "www.avaloncommunities.com", "UDR": "www.udr.com", "Related": "www.relatedrentals.com" };
+  var HOSTS = { "AvalonBay": "www.avaloncommunities.com", "UDR": "www.udr.com", "Related": "www.relatedrentals.com", "Stonehenge": "www.stonehengenyc.com" };
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -248,7 +248,7 @@
 
   function sourcesBox(feed) {
     var box = el("div", "sources");
-    box.appendChild(el("div", null, "Read straight from each landlord's site · studios & 1BR, $3,000–5,000"));
+    box.appendChild(el("div", null, "Read straight from each landlord's site · studios & 1BR, $3,000–5,500"));
     var ul = el("ul");
     (feed.sources || []).forEach(function (s) {
       var li = s.ok

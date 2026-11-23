@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-23T02:37:04.630055+00:00",
+ "checked_at": "2026-11-23T05:13:21.226876+00:00",
  "sources": [
   {
    "building": "AVA High Line",
@@ -7,7 +7,7 @@
    "page": "https://www.avaloncommunities.com/new-york/new-york-city-apartments/ava-high-line",
    "ok": true,
    "units_listed": 18,
-   "matches": 9
+   "matches": 10
   },
   {
    "building": "21 Chelsea",
@@ -23,6 +23,70 @@
    "page": "https://www.relatedrentals.com/search?city%5B%5D=New%20York%20City&property%5B%5D=The%20Westminster",
    "ok": true,
    "units_listed": 7,
+   "matches": 1
+  },
+  {
+   "building": "Avalon West Chelsea",
+   "landlord": "AvalonBay",
+   "page": "https://www.avaloncommunities.com/new-york/new-york-city-apartments/avalon-west-chelsea",
+   "ok": true,
+   "units_listed": 3,
+   "matches": 1
+  },
+  {
+   "building": "The Tate",
+   "landlord": "Related",
+   "page": "https://www.relatedrentals.com/search?city%5B%5D=New%20York%20City&property%5B%5D=The%20Tate",
+   "ok": true,
+   "units_listed": 4,
+   "matches": 1
+  },
+  {
+   "building": "Stonehenge 18",
+   "landlord": "Stonehenge",
+   "page": "https://www.stonehengenyc.com/apartments",
+   "ok": true,
+   "units_listed": 2,
+   "matches": 1
+  },
+  {
+   "building": "Stonehenge Gardens",
+   "landlord": "Stonehenge",
+   "page": "https://www.stonehengenyc.com/apartments",
+   "ok": true,
+   "units_listed": 0,
+   "matches": 0
+  },
+  {
+   "building": "101 West 15th Street",
+   "landlord": "Stonehenge",
+   "page": "https://www.stonehengenyc.com/apartments",
+   "ok": true,
+   "units_listed": 3,
+   "matches": 1
+  },
+  {
+   "building": "780 Greenwich",
+   "landlord": "Stonehenge",
+   "page": "https://www.stonehengenyc.com/apartments",
+   "ok": true,
+   "units_listed": 1,
+   "matches": 0
+  },
+  {
+   "building": "10 Downing Street",
+   "landlord": "Stonehenge",
+   "page": "https://www.stonehengenyc.com/apartments",
+   "ok": true,
+   "units_listed": 1,
+   "matches": 1
+  },
+  {
+   "building": "60 East 12",
+   "landlord": "Stonehenge",
+   "page": "https://www.stonehengenyc.com/apartments",
+   "ok": true,
+   "units_listed": 0,
    "matches": 0
   }
  ],
@@ -190,6 +254,24 @@
    "found_at": "2026-11-23T02:37:04.630055+00:00"
   },
   {
+   "building": "AVA High Line",
+   "landlord": "AvalonBay",
+   "address": "525 West 28th Street",
+   "unit": "1434",
+   "beds": 0,
+   "baths": 1,
+   "sqft": 538,
+   "floor": 14,
+   "rent": 5030,
+   "rent_note": "incl. required monthly fees · 12-month lease",
+   "available": null,
+   "available_now": true,
+   "url": "https://www.avaloncommunities.com/new-york/new-york-city-apartments/ava-high-line/apartment/NY834-NY834-001-1434",
+   "walk_min": 22,
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T05:13:21.226876+00:00"
+  },
+  {
    "building": "21 Chelsea",
    "landlord": "UDR",
    "address": "120 W. 21st Street",
@@ -242,6 +324,114 @@
    "walk_min": 10,
    "first_seen": "2026-11-23",
    "found_at": "2026-11-23T02:37:04.630055+00:00"
+  },
+  {
+   "building": "The Westminster",
+   "landlord": "Related",
+   "address": "180 West 20th Street",
+   "unit": "Studio, 1 Bath",
+   "beds": 0,
+   "baths": 1,
+   "sqft": null,
+   "floor": null,
+   "rent": 5295,
+   "rent_note": null,
+   "available": "2026-12-28",
+   "available_now": false,
+   "url": "https://www.relatedrentals.com/apartment-rentals/new-york-city/chelsea/the-westminster/studio-1-bath-26469",
+   "walk_min": 8,
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T05:13:21.226876+00:00"
+  },
+  {
+   "building": "Avalon West Chelsea",
+   "landlord": "AvalonBay",
+   "address": "282 11th Avenue",
+   "unit": "418",
+   "beds": 0,
+   "baths": 1,
+   "sqft": 453,
+   "floor": 4,
+   "rent": 4445,
+   "rent_note": "incl. required monthly fees · 12-month lease",
+   "available": null,
+   "available_now": true,
+   "url": "https://www.avaloncommunities.com/new-york/new-york-city-apartments/avalon-west-chelsea/apartment/NY829-NY829-001-418",
+   "walk_min": 23,
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T05:13:21.226876+00:00"
+  },
+  {
+   "building": "The Tate",
+   "landlord": "Related",
+   "address": "535 West 23rd Street",
+   "unit": "Alcove Studio, 1 Bath",
+   "beds": 0,
+   "baths": 1,
+   "sqft": null,
+   "floor": null,
+   "rent": 5395,
+   "rent_note": null,
+   "available": "2026-12-29",
+   "available_now": false,
+   "url": "https://www.relatedrentals.com/apartment-rentals/new-york-city/chelsea/the-tate/alcove-studio-1-bath-27194",
+   "walk_min": 16,
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T05:13:21.226876+00:00"
+  },
+  {
+   "building": "Stonehenge 18",
+   "landlord": "Stonehenge",
+   "address": "364 West 18th Street",
+   "unit": "005B",
+   "beds": 0,
+   "baths": 1,
+   "sqft": 464,
+   "floor": null,
+   "rent": 4395,
+   "rent_note": null,
+   "available": null,
+   "available_now": false,
+   "url": "https://www.stonehengenyc.com/apartments/364w18st-005b",
+   "walk_min": 5,
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T05:13:21.226876+00:00"
+  },
+  {
+   "building": "101 West 15th Street",
+   "landlord": "Stonehenge",
+   "address": "101 West 15th Street",
+   "unit": "206",
+   "beds": 0,
+   "baths": 1,
+   "sqft": 490,
+   "floor": null,
+   "rent": 5295,
+   "rent_note": null,
+   "available": null,
+   "available_now": false,
+   "url": "https://www.stonehengenyc.com/apartments/555sixth-206",
+   "walk_min": 7,
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T05:13:21.226876+00:00"
+  },
+  {
+   "building": "10 Downing Street",
+   "landlord": "Stonehenge",
+   "address": "10 Downing Street",
+   "unit": "001T",
+   "beds": 0,
+   "baths": 1,
+   "sqft": 479,
+   "floor": null,
+   "rent": 4995,
+   "rent_note": null,
+   "available": null,
+   "available_now": false,
+   "url": "https://www.stonehengenyc.com/apartments/10downg-001t",
+   "walk_min": 21,
+   "first_seen": "2026-11-23",
+   "found_at": "2026-11-23T05:13:21.226876+00:00"
   }
  ]
 }
