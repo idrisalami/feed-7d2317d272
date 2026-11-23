@@ -2,87 +2,6 @@
  "checked_at": "2026-11-22T23:54:53+00:00",
  "listings": [
   {
-   "path": "fb/1708987680929806",
-   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1708987680929806/",
-   "address": "W 40th St & 8th Ave",
-   "area": "Times Square",
-   "rent": 2900,
-   "prev_rent": null,
-   "beds": 0,
-   "baths": null,
-   "sqft": null,
-   "available": null,
-   "listed": "2026-11-20",
-   "walk_min": null,
-   "no_fee": null,
-   "owner_direct": null,
-   "urgent": false,
-   "amenities": [],
-   "photo": null,
-   "unknowns": [
-    "available date unknown",
-    "stay length unknown"
-   ],
-   "first_seen": "2026-11-22",
-   "found_at": "2026-11-22T23:55:21+00:00",
-   "source": "facebook",
-   "stay": "utilities included"
-  },
-  {
-   "path": "fb/1707165271112047",
-   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1707165271112047/",
-   "address": "E 13th St & 1st Ave",
-   "area": "East Village",
-   "rent": 3600,
-   "prev_rent": null,
-   "beds": 1,
-   "baths": null,
-   "sqft": null,
-   "available": null,
-   "listed": "2026-11-21",
-   "walk_min": null,
-   "no_fee": null,
-   "owner_direct": null,
-   "urgent": true,
-   "amenities": [],
-   "photo": null,
-   "unknowns": [
-    "available date unknown"
-   ],
-   "first_seen": "2026-11-22",
-   "found_at": "2026-11-22T23:55:21+00:00",
-   "source": "facebook",
-   "stay": "min 1 month · utilities included"
-  },
-  {
-   "path": "fb/28959790533662874",
-   "url": "https://www.facebook.com/groups/750177135050925/permalink/28959790533662874/",
-   "address": "E 109th St & Madison Ave",
-   "area": "East Harlem",
-   "rent": null,
-   "prev_rent": null,
-   "beds": 1,
-   "baths": null,
-   "sqft": null,
-   "available": "2026-12-20",
-   "listed": "2026-11-22",
-   "walk_min": null,
-   "no_fee": null,
-   "owner_direct": null,
-   "urgent": true,
-   "amenities": [
-    "Furnished"
-   ],
-   "photo": null,
-   "unknowns": [
-    "rent unknown"
-   ],
-   "first_seen": "2026-11-22",
-   "found_at": "2026-11-22T23:55:21+00:00",
-   "source": "facebook",
-   "stay": "Dec 20 → Jan 2"
-  },
-  {
    "path": "/building/88-horatio-street-new_york/5d",
    "url": "https://streeteasy.com/building/88-horatio-street-new_york/5d",
    "address": "88 Horatio Street #5D",
@@ -174,35 +93,6 @@
    ],
    "first_seen": "2026-11-22",
    "found_at": "2026-11-22T23:54:46+00:00"
-  },
-  {
-   "path": "fb/3620369411447389",
-   "url": "https://www.facebook.com/groups/204548523029512/permalink/3620369411447389/",
-   "address": null,
-   "area": "Financial District",
-   "rent": 4700,
-   "prev_rent": null,
-   "beds": 0,
-   "baths": null,
-   "sqft": null,
-   "available": null,
-   "listed": "2026-11-20",
-   "walk_min": null,
-   "no_fee": true,
-   "owner_direct": null,
-   "urgent": true,
-   "amenities": [
-    "Furnished"
-   ],
-   "photo": null,
-   "unknowns": [
-    "location unknown",
-    "available date unknown"
-   ],
-   "first_seen": "2026-11-20",
-   "found_at": "2026-11-20T14:10:52+00:00",
-   "source": "facebook",
-   "stay": "until May 31 · min 5 months · utilities not included; 6-month lease"
   },
   {
    "path": "/building/250-west-15-street-new_york/rental/5183791",
@@ -423,36 +313,6 @@
    "found_at": "2026-11-18T18:09:39+00:00"
   },
   {
-   "path": "fb/1706792014482706",
-   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1706792014482706/",
-   "address": null,
-   "area": "Midtown West",
-   "rent": 2900,
-   "prev_rent": null,
-   "beds": 0,
-   "baths": null,
-   "sqft": null,
-   "available": null,
-   "listed": "2026-11-18",
-   "walk_min": null,
-   "no_fee": null,
-   "owner_direct": null,
-   "urgent": true,
-   "amenities": [
-    "Furnished"
-   ],
-   "photo": null,
-   "unknowns": [
-    "location unknown",
-    "available date unknown",
-    "stay length unknown"
-   ],
-   "first_seen": "2026-11-18",
-   "found_at": "2026-11-18T14:11:34+00:00",
-   "source": "facebook",
-   "stay": "utilities included"
-  },
-  {
    "path": "/building/47_-49-morton-street-new_york/5e",
    "url": "https://streeteasy.com/building/47_-49-morton-street-new_york/5e",
    "address": "47 Morton Street #5E",
@@ -514,62 +374,6 @@
    ],
    "first_seen": "2026-11-18",
    "found_at": "2026-11-18T14:11:01+00:00"
-  },
-  {
-   "path": "fb/1705069287988312",
-   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1705069287988312/",
-   "address": "40th St & 8th Ave",
-   "area": "Midtown West",
-   "rent": 2960,
-   "prev_rent": null,
-   "beds": 0,
-   "baths": null,
-   "sqft": null,
-   "available": null,
-   "listed": "2026-11-16",
-   "walk_min": null,
-   "no_fee": true,
-   "owner_direct": null,
-   "urgent": true,
-   "amenities": [
-    "Furnished"
-   ],
-   "photo": null,
-   "unknowns": [
-    "available date unknown"
-   ],
-   "first_seen": "2026-11-17",
-   "found_at": "2026-11-17T23:09:31+00:00",
-   "source": "facebook",
-   "stay": "min 1 month · utilities included"
-  },
-  {
-   "path": "fb/1700036661824908",
-   "url": "https://www.facebook.com/groups/1285707596591152/permalink/1700036661824908/",
-   "address": "40th St & 8th Ave",
-   "area": "Times Square",
-   "rent": 3275,
-   "prev_rent": null,
-   "beds": 1,
-   "baths": null,
-   "sqft": null,
-   "available": null,
-   "listed": "2026-11-15",
-   "walk_min": null,
-   "no_fee": true,
-   "owner_direct": null,
-   "urgent": false,
-   "amenities": [
-    "Furnished"
-   ],
-   "photo": null,
-   "unknowns": [
-    "available date unknown"
-   ],
-   "first_seen": "2026-11-17",
-   "found_at": "2026-11-17T23:09:31+00:00",
-   "source": "facebook",
-   "stay": "min 1 month · utilities included"
   },
   {
    "path": "/building/221-west-21-street-new_york/2c",

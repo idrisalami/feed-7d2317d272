@@ -11,13 +11,13 @@
   :root {
     --bg: #f4f4f1; --card: #ffffff; --text: #1b1b1a; --muted: #6d6d68; --line: #e3e3de;
     --accent: #1f6f5c; --accent-text: #ffffff; --chip: #eeeeea; --hot: #c2410c; --hot-bg: #fff1e8;
-    --drop: #15803d; --fb: #1d4ed8; --fb-bg: #e8efff;
+    --drop: #15803d;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #121212; --card: #1d1d1c; --text: #ededea; --muted: #9a9a94; --line: #2e2e2c;
       --accent: #3aa58a; --accent-text: #0d1f1a; --chip: #2a2a28; --hot: #fb923c; --hot-bg: #3a2417;
-      --drop: #4ade80; --fb: #93b4ff; --fb-bg: #1c2540;
+      --drop: #4ade80;
     }
   }
   * { box-sizing: border-box; }
@@ -43,7 +43,6 @@
   .rent .dropped { color: var(--drop); }
   .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
   .badge { font-size: 13px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: var(--hot-bg); color: var(--hot); }
-  .badge.fb { background: var(--fb-bg); color: var(--fb); }
   .facts { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 10px 0 0; font-size: 15px; }
   .facts span { white-space: nowrap; }
   .meta { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 10px 0 0; font-size: 14px; }
@@ -57,19 +56,6 @@
     background: var(--accent); color: var(--accent-text); font-weight: 650; text-decoration: none;
   }
   .state { color: var(--muted); text-align: center; padding: 40px 16px; }
-  .tabs {
-    position: sticky; top: 0; z-index: 1; background: var(--bg);
-    max-width: 640px; margin: 0 auto; padding: 8px 12px; display: flex; gap: 8px;
-  }
-  .tabs[hidden] { display: none; }
-  .tab {
-    flex: 1; font: inherit; font-size: 15px; font-weight: 600; padding: 9px 10px; border-radius: 10px;
-    border: 1px solid var(--line); background: var(--card); color: var(--text); cursor: pointer;
-  }
-  .tab .n { color: var(--muted); font-weight: 500; }
-  .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
-  .tab[aria-selected="true"] .n { color: inherit; opacity: 0.8; }
-  .note { font-size: 14px; color: var(--fb); background: var(--fb-bg); border-radius: 10px; padding: 10px 12px; }
   .hint { color: var(--muted); font-size: 13px; padding: 0 2px; }
 </style>
 </head>
@@ -78,26 +64,13 @@
   <h1>Apartment finds</h1>
   <div class="sub" id="checked">Loading…</div>
 </header>
-<nav class="tabs" role="tablist" aria-label="Listing type" hidden>
-  <button class="tab" role="tab" id="tab-apartments" aria-controls="list" data-tab="apartments">Apartments <span class="n"></span></button>
-  <button class="tab" role="tab" id="tab-short" aria-controls="list" data-tab="short-stays">Short stays <span class="n"></span></button>
-</nav>
-<main id="list" role="tabpanel" aria-live="polite"></main>
+<main id="list" aria-live="polite"></main>
 <script>
 (function () {
   "use strict";
   var DAY = 86400000;
   var list = document.getElementById("list");
   var checked = document.getElementById("checked");
-  var tabsBar = document.querySelector(".tabs");
-  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
-  var TABS = {
-    "apartments": { test: function (r) { return r.source !== "facebook"; },
-      empty: "No apartments yet." },
-    "short-stays": { test: function (r) { return r.source === "facebook"; },
-      empty: "No short stays yet. Facebook groups are checked once a day.",
-      note: "Short stays from Facebook groups, newest found first. Confirm a post is real before paying anything." }
-  };
   var rows = [];
 
   function el(tag, cls, text) {
@@ -150,12 +123,11 @@
       img.referrerPolicy = "no-referrer";
       img.onerror = function () { var ph = el("div", "photo nophoto", "No photo"); img.replaceWith(ph); };
       c.appendChild(img);
-    } else if (r.source !== "facebook") {  // Facebook posts have no photo: skip the empty box
+    } else {
       c.appendChild(el("div", "photo nophoto", "No photo"));
     }
     var b = el("div", "body");
     var badges = el("div", "badges");
-    if (r.source === "facebook") badges.appendChild(el("span", "badge fb", "🛋️ Short stay · Facebook"));
     if (r._urgent) badges.appendChild(el("span", "badge", r.owner_direct ? "🔥 Owner direct" : "🔥 Just listed"));
     if (badges.childNodes.length) b.appendChild(badges);
 
@@ -181,7 +153,6 @@
     var meta = el("dl", "meta");
     function row(k, v) { meta.appendChild(el("dt", null, k)); meta.appendChild(el("dd", null, v)); }
     if (r.available) row("Available", day(r.available));
-    if (r.stay) row("Stay", r.stay);
     if (r.listed) row("Published", day(r.listed) + (ago(r.listed) ? " · " + ago(r.listed) : ""));
     else row("Published", "Unknown");
     var f = found(r);
@@ -196,10 +167,9 @@
     }
     if (r.unknowns && r.unknowns.length) b.appendChild(el("div", "unknown", "Unknown: " + r.unknowns.join(", ")));
 
-    var fb = r.source === "facebook";
-    var url = r.url && safeUrl(r.url, fb ? "www.facebook.com" : "streeteasy.com");
+    var url = r.url && safeUrl(r.url, "streeteasy.com");
     if (url) {
-      var a = el("a", "open", fb ? "Open the post on Facebook" : "Open on StreetEasy");
+      var a = el("a", "open", "Open on StreetEasy");
       a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
       b.appendChild(a);
     }
@@ -207,38 +177,12 @@
     return c;
   }
 
-  function current() { return location.hash === "#short-stays" ? "short-stays" : "apartments"; }
   function render() {
-    var name = current(), t = TABS[name];
-    tabs.forEach(function (b) {
-      var on = b.getAttribute("data-tab") === name;
-      b.setAttribute("aria-selected", on ? "true" : "false");
-      b.tabIndex = on ? 0 : -1;
-      if (on) list.setAttribute("aria-labelledby", b.id);
-    });
-    var shown = rows.filter(t.test);
     list.textContent = "";
-    if (t.note) list.appendChild(el("p", "note", t.note));
-    else if (shown.length) list.appendChild(el("p", "hint", "Newest found first"));
-    if (!shown.length) { list.appendChild(el("p", "state", t.empty)); return; }
-    shown.forEach(function (r) { list.appendChild(card(r)); });
+    if (!rows.length) { state("No apartments yet."); return; }
+    list.appendChild(el("p", "hint", "Newest found first"));
+    rows.forEach(function (r) { list.appendChild(card(r)); });
   }
-  tabs.forEach(function (b) {
-    b.addEventListener("click", function () {
-      var name = b.getAttribute("data-tab");
-      history.replaceState(null, "", name === "apartments" ? location.pathname + location.search : "#" + name);
-      render();
-      window.scrollTo(0, 0);
-    });
-  });
-  tabsBar.addEventListener("keydown", function (e) {
-    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
-    var i = tabs.indexOf(document.activeElement);
-    if (i < 0) return;
-    var next = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
-    next.focus(); next.click();
-  });
-  window.addEventListener("hashchange", render);
 
   fetch("listings.json", { cache: "no-store" })
     .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
@@ -248,14 +192,10 @@
         ? when.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short",
             day: "numeric", hour: "numeric", minute: "2-digit" }) + " NY time"
         : "unknown");
-      rows = (feed.listings || []).map(function (r, i) { r._urgent = isUrgent(r); r._i = i; return r; });
+      rows = (feed.listings || []).filter(function (r) { return r.source !== "facebook"; }).map(function (r, i) { r._urgent = isUrgent(r); r._i = i; return r; });
       rows.sort(function (a, b) {  // newest pull first; feed order (strongest first) within a pull
         return foundKey(b).localeCompare(foundKey(a)) || a._i - b._i;
       });
-      tabs.forEach(function (b) {
-        b.querySelector(".n").textContent = String(rows.filter(TABS[b.getAttribute("data-tab")].test).length);
-      });
-      tabsBar.hidden = false;
       render();
     })
     .catch(function () { checked.textContent = ""; state("Couldn't load listings. Pull to refresh."); });
