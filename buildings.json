@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-24T18:12:43.323722+00:00",
+ "checked_at": "2026-11-24T23:12:19.433807+00:00",
  "sources": [
   {
    "building": "AVA High Line",
@@ -82,6 +82,55 @@
    "building": "8 Gramercy Park South",
    "landlord": "Stonehenge",
    "page": "https://www.stonehengenyc.com/apartments",
+   "ok": false,
+   "error": "URLError"
+  },
+  {
+   "building": "Ruby",
+   "landlord": "Ruby",
+   "page": "https://availability.rosenyc.com/availability/hgpiehrt/",
+   "ok": false,
+   "error": "URLError"
+  },
+  {
+   "building": "The Carteret",
+   "landlord": "Brodsky",
+   "page": "https://www.brodsky.com/rentals/chelsea/208-west-23rd-street",
+   "ok": false,
+   "error": "URLError"
+  },
+  {
+   "building": "507 West Chelsea",
+   "landlord": "507 West Chelsea",
+   "page": "https://engine.bklyngold.com/wp-json/lzn/v1/building_group_availabilities?building_group=Kadima%20Tenth%20Ave%20LLC",
+   "ok": false,
+   "error": "URLError"
+  },
+  {
+   "building": "Casa: 155 West 21 Street",
+   "landlord": "Casa 155",
+   "page": "https://engine.bklyngold.com/wp-json/lzn/v1/building_group_availabilities?building_group=Casa",
+   "ok": false,
+   "error": "URLError"
+  },
+  {
+   "building": "Chelsea 29",
+   "landlord": "Ironstate",
+   "page": "https://ironstate.com/property/chelsea-29/",
+   "ok": false,
+   "error": "URLError"
+  },
+  {
+   "building": "Ohm",
+   "landlord": "Ohm",
+   "page": "https://ohmny.com/availability/",
+   "ok": false,
+   "error": "URLError"
+  },
+  {
+   "building": "The Sierra Chelsea",
+   "landlord": "The Sierra Chelsea",
+   "page": "https://inventory.g5marketingcloud.com/graphql",
    "ok": false,
    "error": "URLError"
   }
