@@ -1,101 +1,89 @@
 {
- "checked_at": "2026-11-24T02:46:23.350636+00:00",
+ "checked_at": "2026-11-24T14:14:38.009221+00:00",
  "sources": [
   {
    "building": "AVA High Line",
    "landlord": "AvalonBay",
    "page": "https://www.avaloncommunities.com/new-york/new-york-city-apartments/ava-high-line",
-   "ok": true,
-   "units_listed": 18,
-   "matches": 10
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "21 Chelsea",
    "landlord": "UDR",
    "page": "https://www.udr.com/new-york-city-apartments/chelsea/21-chelsea/apartments-pricing/",
-   "ok": true,
-   "units_listed": 8,
-   "matches": 3
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "The Westminster",
    "landlord": "Related",
    "page": "https://www.relatedrentals.com/search?city%5B%5D=New%20York%20City&property%5B%5D=The%20Westminster",
-   "ok": true,
-   "units_listed": 7,
-   "matches": 1
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "Avalon West Chelsea",
    "landlord": "AvalonBay",
    "page": "https://www.avaloncommunities.com/new-york/new-york-city-apartments/avalon-west-chelsea",
-   "ok": true,
-   "units_listed": 3,
-   "matches": 1
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "The Tate",
    "landlord": "Related",
    "page": "https://www.relatedrentals.com/search?city%5B%5D=New%20York%20City&property%5B%5D=The%20Tate",
-   "ok": true,
-   "units_listed": 2,
-   "matches": 0
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "Stonehenge 18",
    "landlord": "Stonehenge",
    "page": "https://www.stonehengenyc.com/apartments",
-   "ok": true,
-   "units_listed": 2,
-   "matches": 1
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "Stonehenge Gardens",
    "landlord": "Stonehenge",
    "page": "https://www.stonehengenyc.com/apartments",
-   "ok": true,
-   "units_listed": 0,
-   "matches": 0
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "101 West 15th Street",
    "landlord": "Stonehenge",
    "page": "https://www.stonehengenyc.com/apartments",
-   "ok": true,
-   "units_listed": 3,
-   "matches": 1
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "780 Greenwich",
    "landlord": "Stonehenge",
    "page": "https://www.stonehengenyc.com/apartments",
-   "ok": true,
-   "units_listed": 1,
-   "matches": 0
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "10 Downing Street",
    "landlord": "Stonehenge",
    "page": "https://www.stonehengenyc.com/apartments",
-   "ok": true,
-   "units_listed": 1,
-   "matches": 1
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "60 East 12",
    "landlord": "Stonehenge",
    "page": "https://www.stonehengenyc.com/apartments",
-   "ok": true,
-   "units_listed": 0,
-   "matches": 0
+   "ok": false,
+   "error": "URLError"
   },
   {
    "building": "8 Gramercy Park South",
    "landlord": "Stonehenge",
    "page": "https://www.stonehengenyc.com/apartments",
-   "ok": true,
-   "units_listed": 0,
-   "matches": 0
+   "ok": false,
+   "error": "URLError"
   }
  ],
  "units": [
