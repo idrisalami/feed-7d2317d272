@@ -1,6 +1,1088 @@
 {
- "checked_at": "2026-11-24T14:08:21+00:00",
+ "checked_at": "2026-11-24T18:06:32+00:00",
  "listings": [
+  {
+   "path": "/building/the-west-coast/635",
+   "url": "https://streeteasy.com/building/the-west-coast/635",
+   "address": "95 Horatio Street #635",
+   "area": "West Village",
+   "rent": 5455,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-13",
+   "listed": "2026-10-16",
+   "walk_min": 11,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Childrens playroom",
+    "Concierge",
+    "Shared outdoor space",
+    "Doorman",
+    "Elevator"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/681a241586c0528a7d3104863e0f82c1-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/225-west-12-street/1g",
+   "url": "https://streeteasy.com/building/225-west-12-street/1g",
+   "address": "225 West 12th Street #1G",
+   "area": "West Village",
+   "rent": 5495,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": 625,
+   "available": "2026-11-13",
+   "listed": "2026-09-09",
+   "walk_min": 6,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/9bc07a87db27355b11bb7f3eccdd0f73-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/140-waverly-place-new_york/2c",
+   "url": "https://streeteasy.com/building/140-waverly-place-new_york/2c",
+   "address": "140 Waverly Place #2C",
+   "area": "West Village",
+   "rent": 3595,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-14",
+   "listed": "2026-10-26",
+   "walk_min": 15,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Elevator",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/7dd9d8eb9a9aa101ba81a47f31cab34b-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/21-leroy-street-new_york/2",
+   "url": "https://streeteasy.com/building/21-leroy-street-new_york/2",
+   "address": "21 Leroy Street #2",
+   "area": "West Village",
+   "rent": 3495,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-23",
+   "listed": "2026-11-23",
+   "walk_min": 18,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "View",
+    "Hardwood floors",
+    "Fios available",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/80ee7b80f356b85b404751dfed312445-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/205-west-13-street-new_york/4t",
+   "url": "https://streeteasy.com/building/205-west-13-street-new_york/4t",
+   "address": "205 West 13th Street #4T",
+   "area": "West Village",
+   "rent": 3575,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-24",
+   "listed": "2026-11-23",
+   "walk_min": 5,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "View",
+    "Hardwood floors",
+    "Elevator",
+    "Fios available",
+    "Laundry",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/8804e16c9ae13d50ec3318a8f7643505-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/325-west-4-street-new_york/8r",
+   "url": "https://streeteasy.com/building/325-west-4-street-new_york/8r",
+   "address": "325 West 4th Street #8R",
+   "area": "West Village",
+   "rent": 3195,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-17",
+   "listed": "2026-11-18",
+   "walk_min": 5,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Fireplace"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/0d53d119e129056aabbf1a2a6ecb2d8c-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/225-west-12-street/2i",
+   "url": "https://streeteasy.com/building/225-west-12-street/2i",
+   "address": "225 West 12th Street #2I",
+   "area": "West Village",
+   "rent": 3695,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-15",
+   "listed": "2026-07-28",
+   "walk_min": 6,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Laundry",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/a36bbb0c593813b9b075fbd303d16faf-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/325-west-4-street-new_york/3r",
+   "url": "https://streeteasy.com/building/325-west-4-street-new_york/3r",
+   "address": "325 West 4th Street #3R",
+   "area": "West Village",
+   "rent": 3695,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-17",
+   "listed": "2026-11-18",
+   "walk_min": 5,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Fireplace"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/d94d62dffe8cfde32906cc1e6ca43615-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/316-west-11-street-new_york/2s",
+   "url": "https://streeteasy.com/building/316-west-11-street-new_york/2s",
+   "address": "316 West 11th Street #2S",
+   "area": "West Village",
+   "rent": 3800,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-06",
+   "listed": "2026-11-05",
+   "walk_min": 10,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Fios available",
+    "Shared outdoor space"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/dd4fc18d362b95aae23d393eb6bbea5b-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/455-hudson-street-new_york/16",
+   "url": "https://streeteasy.com/building/455-hudson-street-new_york/16",
+   "address": "455 Hudson Street #16",
+   "area": "West Village",
+   "rent": 3800,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-15",
+   "listed": "2026-11-13",
+   "walk_min": 16,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/cc5eb4a0a3af53b246627836c99cd530-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/8-jones-street-new_york/6b",
+   "url": "https://streeteasy.com/building/8-jones-street-new_york/6b",
+   "address": "8 Jones Street #6B",
+   "area": "West Village",
+   "rent": 3995,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-01",
+   "listed": "2026-11-19",
+   "walk_min": 17,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Hardwood floors",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/d0f1a868f61e2ef3d11ea29c4ebc2575-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/26-grove-street-new_york/1d",
+   "url": "https://streeteasy.com/building/26-grove-street-new_york/1d",
+   "address": "26 Grove Street #1D",
+   "area": "West Village",
+   "rent": 4100,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-02",
+   "listed": "2026-11-03",
+   "walk_min": 15,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Hardwood floors",
+    "Elevator",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/4d16ecc87eb1c2ebb5227af653150b4e-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/754-greenwich-street-new_york/4b",
+   "url": "https://streeteasy.com/building/754-greenwich-street-new_york/4b",
+   "address": "754 Greenwich Street #4B",
+   "area": "West Village",
+   "rent": 3850,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-26",
+   "listed": "2026-10-26",
+   "walk_min": 10,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/57e37362f5a3b03eb7da1995197eb46e-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/110-horatio-street-new_york/215",
+   "url": "https://streeteasy.com/building/110-horatio-street-new_york/215",
+   "address": "110 Horatio Street #215",
+   "area": "West Village",
+   "rent": 5395,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-01",
+   "listed": "2026-09-22",
+   "walk_min": 11,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Bike room",
+    "Concierge",
+    "Shared outdoor space",
+    "Doorman",
+    "Elevator"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/a6e5834be6fc48082d10038d0492428d-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/377-bleecker-street-new_york/4c",
+   "url": "https://streeteasy.com/building/377-bleecker-street-new_york/4c",
+   "address": "377 Bleecker Street #4C",
+   "area": "West Village",
+   "rent": 4200,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-06-22",
+   "listed": "2026-05-13",
+   "walk_min": 10,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Hardwood floors",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/1b95ad372b0657cda5f89136f961ccf4-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/316-west-14-street-new_york/24",
+   "url": "https://streeteasy.com/building/316-west-14-street-new_york/24",
+   "address": "316 West 14th Street #24",
+   "area": "West Village",
+   "rent": 4220,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 380,
+   "available": "2026-12-15",
+   "listed": "2026-11-09",
+   "walk_min": 3,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Central ac",
+    "Dishwasher",
+    "Furnished",
+    "Washer dryer"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/38fb588c25f50a1ceb8a827a5eb8987c-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/119-bank-street-new_york/4f",
+   "url": "https://streeteasy.com/building/119-bank-street-new_york/4f",
+   "address": "119 Bank Street #4F",
+   "area": "West Village",
+   "rent": 4250,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-01",
+   "listed": "2026-11-17",
+   "walk_min": 10,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Private outdoor space",
+    "Shared outdoor space",
+    "Doorman",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/328a9e154c924cef00ef927628bb42e2-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/322-west-14-street-new_york/4a",
+   "url": "https://streeteasy.com/building/322-west-14-street-new_york/4a",
+   "address": "322 West 14th Street #4A",
+   "area": "West Village",
+   "rent": 4400,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-01",
+   "listed": "2026-10-18",
+   "walk_min": 3,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Laundry",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/ae80e47dec069df1b5cfe102c3f71031-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/226-west-4-street-new_york/a",
+   "url": "https://streeteasy.com/building/226-west-4-street-new_york/a",
+   "address": "226 West 4th Street #A",
+   "area": "West Village",
+   "rent": 4500,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-01",
+   "listed": "2026-10-02",
+   "walk_min": 12,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Central ac",
+    "View",
+    "Hardwood floors",
+    "Private outdoor space",
+    "Doorman",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/53ba4225d9f7bc4c36b5b0bce24cc97c-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/73-perry-street-new_york/3f",
+   "url": "https://streeteasy.com/building/73-perry-street-new_york/3f",
+   "address": "73 Perry Street #3F",
+   "area": "West Village",
+   "rent": 4500,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-19",
+   "listed": "2026-11-18",
+   "walk_min": 9,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Central ac",
+    "Fireplace",
+    "Hardwood floors",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/f546109989b1a9c64e4ae0feef00db32-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/275-bleecker-street-new_york/1",
+   "url": "https://streeteasy.com/building/275-bleecker-street-new_york/1",
+   "address": "275 Bleecker Street #1",
+   "area": "West Village",
+   "rent": 4500,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-01",
+   "listed": "2026-10-19",
+   "walk_min": 17,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Central ac",
+    "Dishwasher",
+    "Private outdoor space",
+    "Washer dryer"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/e021a523bef6362bd2b8a78d7e9eb011-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/1-jane-street-new_york/1e",
+   "url": "https://streeteasy.com/building/1-jane-street-new_york/1e",
+   "address": "1 Jane Street #1E",
+   "area": "West Village",
+   "rent": 4625,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-07-29",
+   "listed": "2026-07-29",
+   "walk_min": 5,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Elevator",
+    "Fios available",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/c721f3cef63018a454433d853ea8db9e-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/45-carmine-street-new_york/3f",
+   "url": "https://streeteasy.com/building/45-carmine-street-new_york/3f",
+   "address": "45 Carmine Street #3F",
+   "area": "West Village",
+   "rent": 4595,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-15",
+   "listed": "2026-11-12",
+   "walk_min": 19,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Elevator"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/133e28b3236914f12251773085ff6810-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/118-christopher-street-new_york/14",
+   "url": "https://streeteasy.com/building/118-christopher-street-new_york/14",
+   "address": "118 Christopher Street #14",
+   "area": "West Village",
+   "rent": 4795,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-27",
+   "listed": "2026-10-26",
+   "walk_min": 13,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Private outdoor space",
+    "Dishwasher",
+    "Hardwood floors",
+    "Washer dryer"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/4465e9ad71ba4f75d151cebaa378d68c-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/305-west-13-street-new_york/3f",
+   "url": "https://streeteasy.com/building/305-west-13-street-new_york/3f",
+   "address": "305 West 13th Street #3F",
+   "area": "West Village",
+   "rent": 4695,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-19",
+   "listed": "2026-11-19",
+   "walk_min": 3,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Elevator",
+    "Fios available",
+    "Laundry",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/3faabce1f6c240dde8c71055a299b008-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/10-charles/2a",
+   "url": "https://streeteasy.com/building/10-charles/2a",
+   "address": "10 Charles Street #2A",
+   "area": "West Village",
+   "rent": 4800,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-09-30",
+   "listed": "2026-10-26",
+   "walk_min": 11,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Furnished",
+    "Hardwood floors",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/a453ba18d194a04acb1033a362e90ce8-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/23-bedford-street-new_york/2b",
+   "url": "https://streeteasy.com/building/23-bedford-street-new_york/2b",
+   "address": "23 Bedford Street #2B",
+   "area": "West Village",
+   "rent": 4895,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-07",
+   "listed": "2026-10-07",
+   "walk_min": 21,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Washer dryer"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/3a72f94295aebcfd3d1617178db37ff5-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/90-bank-street-new_york/4e",
+   "url": "https://streeteasy.com/building/90-bank-street-new_york/4e",
+   "address": "90 Bank Street #4E",
+   "area": "West Village",
+   "rent": 4800,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-15",
+   "listed": "2026-11-12",
+   "walk_min": 9,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Hardwood floors",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/f64ec080997c00396d7be85fde63438f-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/234-west-14-street-new_york/5crp",
+   "url": "https://streeteasy.com/building/234-west-14-street-new_york/5crp",
+   "address": "234 West 14th Street #5CRP",
+   "area": "West Village",
+   "rent": 4995,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-18",
+   "listed": "2026-11-18",
+   "walk_min": 4,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Private outdoor space",
+    "Washer dryer",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/7f82157be36766fda0e980e3f58977c1-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/10-downing-street-new_york/001t",
+   "url": "https://streeteasy.com/building/10-downing-street-new_york/001t",
+   "address": "10 Downing Street #1T",
+   "area": "West Village",
+   "rent": 4995,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 479,
+   "available": "2026-10-20",
+   "listed": "2026-10-20",
+   "walk_min": 22,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Shared outdoor space",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Gym"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/082ddd90cd5ccc25584abaecdc39a864-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/100-jane-street-new_york/3n",
+   "url": "https://streeteasy.com/building/100-jane-street-new_york/3n",
+   "address": "100 Jane Street #3N",
+   "area": "West Village",
+   "rent": 4895,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-05",
+   "listed": "2026-11-05",
+   "walk_min": 11,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Shared outdoor space",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Gym"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/16a52869fba56030c23286cf03362112-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/95-christopher-street-new_york/6h",
+   "url": "https://streeteasy.com/building/95-christopher-street-new_york/6h",
+   "address": "95 Christopher Street #6H",
+   "area": "West Village",
+   "rent": 5100,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-16",
+   "listed": "2026-10-16",
+   "walk_min": 13,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Gym"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/b9fa136c78b8708de900b855c3bb5f24-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/110-horatio-street-new_york/522",
+   "url": "https://streeteasy.com/building/110-horatio-street-new_york/522",
+   "address": "110 Horatio Street #522",
+   "area": "West Village",
+   "rent": 5455,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-09",
+   "listed": "2026-10-02",
+   "walk_min": 11,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Bike room",
+    "Concierge",
+    "Shared outdoor space",
+    "Doorman",
+    "Elevator"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/587cd3c5814855143c55db204707b1dc-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/67-jane-street-new_york/6b",
+   "url": "https://streeteasy.com/building/67-jane-street-new_york/6b",
+   "address": "67 Jane Street #6B",
+   "area": "West Village",
+   "rent": 5000,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-01",
+   "listed": "2026-08-10",
+   "walk_min": 8,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Fireplace",
+    "Hardwood floors",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/3c4e5dda14fbda83773703621575e154-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/324-west-14-street-new_york/2d",
+   "url": "https://streeteasy.com/building/324-west-14-street-new_york/2d",
+   "address": "324 West 14th Street #2D",
+   "area": "West Village",
+   "rent": 5000,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-23",
+   "listed": "2026-11-13",
+   "walk_min": 3,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Private outdoor space",
+    "Central ac",
+    "Dishwasher",
+    "Hardwood floors",
+    "Washer dryer"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/8ff2a6d3b3633852080c69c36ed7567c-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
+  {
+   "path": "/building/95-christopher-street-new_york/5c",
+   "url": "https://streeteasy.com/building/95-christopher-street-new_york/5c",
+   "address": "95 Christopher Street #5C",
+   "area": "West Village",
+   "rent": 5200,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-06",
+   "listed": "2026-10-06",
+   "walk_min": 13,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Gym"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/f5fe7a43c35ac53ed0d14b93d1e1accc-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-24",
+   "found_at": "2026-11-24T18:12:20+00:00"
+  },
   {
    "path": "/building/336-west-19-street-new_york/2d",
    "url": "https://streeteasy.com/building/336-west-19-street-new_york/2d",
@@ -1674,8 +2756,8 @@
    "url": "https://streeteasy.com/building/3-eleven/1118",
    "address": "311 11th Avenue #1118",
    "area": "West Chelsea",
-   "rent": 5595,
-   "prev_rent": null,
+   "rent": 5395,
+   "prev_rent": 5595,
    "beds": 1,
    "baths": 1.0,
    "sqft": null,
@@ -1706,8 +2788,8 @@
    "url": "https://streeteasy.com/building/3-eleven/2419",
    "address": "311 11th Avenue #2419",
    "area": "West Chelsea",
-   "rent": 5695,
-   "prev_rent": null,
+   "rent": 5495,
+   "prev_rent": 5695,
    "beds": 1,
    "baths": 1.0,
    "sqft": null,
