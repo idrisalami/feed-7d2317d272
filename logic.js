@@ -202,6 +202,27 @@
     return s.time ? out + ", " + s.time : out;
   };
 
+  // The colored strip on top of a StreetEasy card: {state, label, when, lines} or null.
+  // state is a STATES key, or "building" for a neutral "Same building" strip.
+  L.stripFor = function (st) {
+    if (!st) return null;
+    function day(s) { return L.statusWhen({ date: s.date }); }
+    function short(s) { return "#" + s.unit + " " + (L.STATUS_LABELS[s.state] || s.state).toLowerCase() + " · " + day(s); }
+    var us = st.unit, b = st.building, sib = L.shownSiblings(st), lines = [];
+    if (us) {
+      return { state: us.state, label: L.STATUS_LABELS[us.state] || us.state,
+        when: day(us) + (us.time ? " · " + us.time : ""),
+        lines: Array.isArray(us.notes) ? us.notes.slice() : [] };
+    }
+    sib.slice(0, 2).forEach(function (s) { lines.push(short(s)); });
+    if (sib.length > 2) lines.push("+" + (sib.length - 2) + " more");
+    if (b && b.state === "dropped") return { state: "dropped", label: "Building dropped", when: day(b), lines: lines };
+    var repeat = b && sib.some(function (s) { return s.state === b.state && s.date === b.date; });
+    if (b && !repeat) lines.push(b.name + " " + (L.STATUS_LABELS[b.state] || b.state).toLowerCase() + " · " + day(b));
+    if (!lines.length) return null;
+    return { state: "building", label: "Same building", when: lines[0], lines: lines.slice(1) };
+  };
+
   L.statusCounts = function (items) {
     var c = {};
     items.forEach(function (i) { var k = L.stateOf(i); c[k] = (c[k] || 0) + 1; });
