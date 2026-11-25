@@ -11,13 +11,13 @@
   :root {
     --bg: #f4f4f1; --card: #ffffff; --text: #1b1b1a; --muted: #6d6d68; --line: #e3e3de;
     --accent: #1f6f5c; --accent-text: #ffffff; --chip: #eeeeea; --hot: #c2410c; --hot-bg: #fff1e8;
-    --drop: #15803d;
+    --drop: #15803d; --soft: #e3f1ec; --soft-text: #17594a; --shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #121212; --card: #1d1d1c; --text: #ededea; --muted: #9a9a94; --line: #2e2e2c;
       --accent: #3aa58a; --accent-text: #0d1f1a; --chip: #2a2a28; --hot: #fb923c; --hot-bg: #3a2417;
-      --drop: #4ade80;
+      --drop: #4ade80; --soft: #173029; --soft-text: #7fd8bf; --shadow: none;
     }
   }
   * { box-sizing: border-box; }
@@ -26,72 +26,218 @@
     font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     -webkit-text-size-adjust: 100%;
   }
-  header { padding: 20px 16px 8px; max-width: 640px; margin: 0 auto; }
+  body.locked { overflow: hidden; }
+  button, select { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 12px; }
+
+  header { padding: 20px 0 6px; }
   h1 { font-size: 26px; margin: 0; letter-spacing: -0.01em; }
   .sub { color: var(--muted); font-size: 14px; margin-top: 4px; }
-  main { max-width: 640px; margin: 0 auto; padding: 8px 12px 40px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-  .photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--chip); }
-  .nophoto { display: grid; place-items: center; color: var(--muted); font-size: 14px; }
-  .body { padding: 12px 14px 14px; }
-  .top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
-  .top > div:first-child { min-width: 0; }
-  .addr { font-weight: 650; font-size: 17px; line-height: 1.25; }
-  .area { color: var(--muted); font-size: 14px; margin-top: 2px; }
-  .rent { font-weight: 700; font-size: 20px; white-space: nowrap; text-align: right; }
-  .rent s { display: block; color: var(--muted); font-weight: 400; font-size: 14px; }
-  .rent .dropped { color: var(--drop); }
-  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
-  .badge { font-size: 13px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: var(--hot-bg); color: var(--hot); }
-  .facts { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 10px 0 0; font-size: 15px; }
-  .facts span { white-space: nowrap; }
-  .meta { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 10px 0 0; font-size: 14px; }
-  .meta dt { color: var(--muted); }
-  .meta dd { margin: 0; }
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-  .chip { font-size: 13px; padding: 3px 9px; border-radius: 999px; background: var(--chip); }
-  .unknown { color: var(--muted); font-size: 13px; margin-top: 10px; }
-  .open {
-    display: block; margin-top: 12px; padding: 12px; border-radius: 10px; text-align: center;
-    background: var(--accent); color: var(--accent-text); font-weight: 650; text-decoration: none;
-  }
-  .state { color: var(--muted); text-align: center; padding: 40px 16px; }
-  .hint { color: var(--muted); font-size: 13px; padding: 0 2px; }
-  .tabs { position: sticky; top: 0; z-index: 1; background: var(--bg);
-    max-width: 640px; margin: 0 auto; padding: 8px 12px; display: flex; gap: 8px; }
-  .tab { flex: 1; font: inherit; font-size: 15px; font-weight: 600; padding: 9px 10px; border-radius: 10px;
-    border: 1px solid var(--line); background: var(--card); color: var(--text); cursor: pointer; }
-  .tab .n { color: var(--muted); font-weight: 500; }
+
+  .tabbar { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .tabs { display: flex; gap: 6px; padding-top: 8px; padding-bottom: 8px; }
+  .tab { flex: 1 1 0; min-width: 0; font-size: 15px; font-weight: 600; padding: 9px 6px; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--card); white-space: nowrap; }
+  .tab .n { color: var(--muted); font-weight: 500; margin-left: 2px; }
   .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
   .tab[aria-selected="true"] .n { color: inherit; opacity: 0.8; }
+
+  .toolbar { display: flex; align-items: center; gap: 8px; padding: 12px 0 4px; }
+  .count { flex: 1 1 auto; min-width: 0; font-size: 14px; color: var(--muted); white-space: nowrap; }
+  .count b { color: var(--text); font-weight: 650; }
+  select {
+    -webkit-appearance: none; appearance: none; font-size: 14px; padding: 7px 28px 7px 10px; border-radius: 10px;
+    border: 1px solid var(--line); background-color: var(--card); max-width: 100%;
+    background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+    background-position: calc(100% - 15px) 52%, calc(100% - 10px) 52%; background-size: 5px 5px; background-repeat: no-repeat;
+  }
+  .btn { font-size: 14px; font-weight: 600; padding: 7px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); white-space: nowrap; }
+  .btn .k { display: inline-block; min-width: 18px; padding: 0 5px; margin-left: 4px; border-radius: 999px;
+    background: var(--accent); color: var(--accent-text); font-size: 12px; line-height: 18px; text-align: center; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  .link { border: 0; background: none; padding: 4px 2px; font-size: 14px; font-weight: 600; color: var(--accent); }
+
+  .active { display: flex; flex-wrap: wrap; gap: 6px; padding: 6px 0 2px; }
+  .active:empty { display: none; }
+  .achip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; padding: 4px 6px 4px 10px;
+    border-radius: 999px; border: 1px solid transparent; background: var(--soft); color: var(--soft-text); }
+  .achip .x { font-size: 15px; line-height: 1; opacity: 0.75; }
+
+  .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .panel-head h2 { font-size: 17px; margin: 0; }
+  .panel-head .side { display: flex; align-items: center; gap: 6px; }
+  .close { border: 0; background: var(--chip); width: 34px; height: 34px; border-radius: 999px; font-size: 20px; line-height: 1; }
+  .group { padding: 14px 0 0; }
+  .glabel { font-size: 12px; font-weight: 650; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 0 0 7px; }
+  .seg { display: flex; background: var(--chip); border-radius: 10px; padding: 3px; gap: 2px; }
+  .seg button { flex: 1 1 0; min-width: 0; border: 0; background: transparent; padding: 7px 4px; border-radius: 8px; font-size: 14px; white-space: nowrap; }
+  .seg button[aria-pressed="true"] { background: var(--card); font-weight: 650; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14); }
+  .pair { display: flex; align-items: center; gap: 8px; }
+  .pair select { flex: 1 1 0; min-width: 0; }
+  .pair .dash { color: var(--muted); }
+  .availrow { display: flex; gap: 8px; }
+  .availrow .seg { flex: 1 1 0; }
+  .availrow select { flex: 1 1 0; min-width: 0; }
+  .availrow select.on { border-color: var(--accent); color: var(--soft-text); background-color: var(--soft); font-weight: 650; }
+  .tchips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tchip { font-size: 14px; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); }
+  .tchip .n { color: var(--muted); margin-left: 3px; font-size: 13px; }
+  .tchip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
+  .tchip[aria-pressed="true"] .n { color: inherit; opacity: 0.8; }
+  .panel-foot { display: none; }
+
+  #list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 8px 0 40px; align-content: start; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px; box-shadow: var(--shadow); min-width: 0;
+    display: flex; flex-direction: column; }
+  .row { flex: 1 0 auto; display: flex; gap: 12px; align-items: flex-start; }
+  .thumb { flex: 0 0 96px; width: 96px; height: 96px; border-radius: 10px; overflow: hidden; background: var(--chip); }
+  .thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .nophoto { width: 100%; height: 100%; display: grid; place-items: center; color: var(--muted); font-size: 12px; }
+  .initials { width: 100%; height: 100%; display: grid; place-items: center; background: var(--soft); color: var(--soft-text);
+    font-size: 24px; font-weight: 700; letter-spacing: 0.02em; }
+  .main { flex: 1 1 auto; min-width: 0; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+  .badge { font-size: 12px; font-weight: 650; padding: 2px 8px; border-radius: 999px; background: var(--hot-bg); color: var(--hot); }
+  .price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 8px; }
+  .rent { font-weight: 750; font-size: 22px; letter-spacing: -0.01em; line-height: 1.15; }
+  .rent.dropped { color: var(--drop); }
+  .price s { color: var(--muted); font-size: 14px; }
+  .note { display: block; color: var(--muted); font-size: 12px; line-height: 1.3; margin-top: 1px; }
+  .title { font-weight: 600; font-size: 15px; line-height: 1.3; margin-top: 3px; overflow: hidden; overflow-wrap: anywhere;
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .subtitle { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 7px; }
+  .tag { font-size: 12px; font-weight: 550; padding: 2px 7px; border-radius: 6px; background: var(--chip); white-space: nowrap; }
+  .tag.now { color: var(--drop); }
+  .tag.new { background: var(--accent); color: var(--accent-text); font-weight: 700; }
+  .tag.src { background: transparent; border: 1px solid var(--line); color: var(--muted); padding: 1px 6px; }
+
+  .foot { position: relative; margin-top: 10px; border-top: 1px solid var(--line); }
+  .more > summary { list-style: none; cursor: pointer; font-size: 14px; font-weight: 600; color: var(--muted); padding: 9px 140px 1px 0; }
+  .more > summary::-webkit-details-marker { display: none; }
+  .more > summary::after { content: " \25BE"; }
+  .more[open] > summary::after { content: " \25B4"; }
+  .srclink { position: absolute; top: 0; right: 0; padding: 9px 0 1px; font-size: 14px; font-weight: 650; color: var(--accent);
+    text-decoration: none; white-space: nowrap; max-width: 60%; overflow: hidden; text-overflow: ellipsis; }
+  .meta { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; margin: 8px 0 0; font-size: 14px; }
+  .meta dt { color: var(--muted); }
+  .meta dd { margin: 0; min-width: 0; }
+  .meta .ok { color: var(--drop); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .chip { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--chip); }
+  .unknown { color: var(--muted); font-size: 13px; margin-top: 8px; }
+
+  .state { color: var(--muted); text-align: center; padding: 36px 16px; grid-column: 1 / -1; }
+  .state p { margin: 0 0 12px; }
+  .state strong { display: block; color: var(--text); font-size: 17px; margin-bottom: 4px; }
   .sources { font-size: 13px; color: var(--muted); background: var(--card); border: 1px solid var(--line);
-    border-radius: 10px; padding: 10px 12px; }
-  .sources ul { margin: 4px 0 0; padding-left: 18px; }
+    border-radius: 12px; padding: 10px 12px; margin-top: 8px; }
+  .sources > summary { cursor: pointer; list-style: none; }
+  .sources > summary::-webkit-details-marker { display: none; }
+  .sources > summary .status::after { content: " \25BE"; color: var(--muted); }
+  .sources[open] > summary .status::after { content: " \25B4"; }
+  .sources .status { display: block; color: var(--text); font-weight: 600; margin-top: 2px; }
+  .sources .status.bad { color: var(--hot); }
+  .sources ul { margin: 6px 0 0; padding-left: 18px; }
   .sources .bad { color: var(--hot); }
-  .rent small { display: block; color: var(--muted); font-weight: 400; font-size: 12px; white-space: normal;
-    max-width: 150px; margin-left: auto; line-height: 1.3; }
-  .now { color: var(--drop); font-weight: 600; }
+  .warn { font-size: 13px; color: var(--hot); background: var(--hot-bg); border-radius: 10px; padding: 8px 12px; margin-top: 8px; }
+
+  @media (max-width: 899px) {
+    .filters-btn { display: inline-block; }
+    .panel { display: none; position: fixed; inset: 0; z-index: 20; background: var(--bg); flex-direction: column; }
+    .panel.is-open { display: flex; }
+    .panel-head { padding: 14px 16px 12px; border-bottom: 1px solid var(--line); }
+    .panel-body { flex: 1 1 auto; overflow-y: auto; padding: 0 16px 20px; -webkit-overflow-scrolling: touch; }
+    .panel-foot { display: flex; gap: 10px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: var(--bg); }
+    .panel-foot .primary { flex: 1 1 auto; padding: 12px; font-size: 16px; border-radius: 12px; }
+    .panel-foot .btn:not(.primary) { padding: 12px 16px; font-size: 16px; border-radius: 12px; }
+    .panel-head .clear { display: none; }
+  }
+  @media (min-width: 900px) {
+    .wrap { max-width: 1280px; padding: 0 24px; }
+    header { padding-top: 28px; }
+    .tabs { padding-top: 10px; padding-bottom: 10px; }
+    .tab { flex: 0 0 auto; padding: 8px 18px; }
+    .filters-btn, .close { display: none; }
+    .layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 24px; align-items: start; }
+    .panel { position: sticky; top: 72px; max-height: calc(100vh - 88px); overflow-y: auto; margin-top: 12px;
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px 18px; box-shadow: var(--shadow); }
+    .toolbar { padding-top: 12px; }
+    #list { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+  }
 </style>
 </head>
 <body>
-<header>
-  <h1>Apartment finds</h1>
-  <div class="sub" id="checked">Loading…</div>
-</header>
-<nav class="tabs" role="tablist" aria-label="Source">
-  <button class="tab" role="tab" id="tab-streeteasy" aria-controls="list" data-tab="streeteasy">StreetEasy <span class="n"></span></button>
-  <button class="tab" role="tab" id="tab-buildings" aria-controls="list" data-tab="buildings">Buildings <span class="n"></span></button>
+<div class="wrap">
+  <header>
+    <h1>Apartment finds</h1>
+    <div class="sub" id="checked">Loading…</div>
+  </header>
+</div>
+<nav class="tabbar" aria-label="Source">
+  <div class="wrap tabs" role="tablist">
+    <button class="tab" role="tab" id="tab-all" aria-controls="list" data-tab="all">All <span class="n"></span></button>
+    <button class="tab" role="tab" id="tab-streeteasy" aria-controls="list" data-tab="streeteasy">StreetEasy <span class="n"></span></button>
+    <button class="tab" role="tab" id="tab-buildings" aria-controls="list" data-tab="buildings">Buildings <span class="n"></span></button>
+  </div>
 </nav>
-<main id="list" role="tabpanel" aria-live="polite"></main>
+<div class="wrap layout">
+  <aside class="panel" id="panel" aria-label="Filters">
+    <div class="panel-head">
+      <h2>Filters</h2>
+      <div class="side">
+        <button class="link clear" type="button" id="panel-clear">Clear</button>
+        <button class="close" type="button" id="panel-close" aria-label="Close filters">×</button>
+      </div>
+    </div>
+    <div class="panel-body" id="controls"></div>
+    <div class="panel-foot">
+      <button class="btn" type="button" id="foot-clear">Clear</button>
+      <button class="btn primary" type="button" id="show">Show</button>
+    </div>
+  </aside>
+  <section>
+    <div class="toolbar">
+      <div class="count" id="count" aria-live="polite"></div>
+      <select id="sort" aria-label="Sort by">
+        <option value="newest">Newest</option>
+        <option value="cheapest">Cheapest</option>
+        <option value="closest">Closest</option>
+        <option value="soonest">Soonest</option>
+      </select>
+      <button class="btn filters-btn" type="button" id="open-filters" aria-controls="panel" aria-expanded="false">Filters</button>
+    </div>
+    <div class="active" id="active"></div>
+    <div id="top"></div>
+    <main id="list" role="tabpanel"></main>
+  </section>
+</div>
+<script src="logic.js"></script>
 <script>
 (function () {
   "use strict";
+  var F = window.FeedLogic;
   var DAY = 86400000;
+  var STORE = "feedFilters";
   var list = document.getElementById("list");
   var checked = document.getElementById("checked");
-  var rows = [], units = [], feeds = { streeteasy: undefined, buildings: undefined };
+  var topBox = document.getElementById("top");
+  var controls = document.getElementById("controls");
+  var panel = document.getElementById("panel");
+  var openBtn = document.getElementById("open-filters");
+  var sortSel = document.getElementById("sort");
   var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
-  var HOSTS = { "AvalonBay": "www.avaloncommunities.com", "UDR": "www.udr.com", "Related": "www.relatedrentals.com", "Stonehenge": "www.stonehengenyc.com" };
+  var HOSTS = { "AvalonBay": "www.avaloncommunities.com", "UDR": "www.udr.com", "Related": "www.relatedrentals.com", "Stonehenge": "www.stonehengenyc.com", "Brodsky": "www.brodsky.com", "Ohm": "ohmny.com" };
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var PRICES = [];
+  for (var p = F.DEFAULTS.min; p <= F.DEFAULTS.max; p += 250) PRICES.push(p);
+
+  var feeds = { streeteasy: undefined, buildings: undefined };
+  var items = { streeteasy: [], buildings: [] };
+  var nyFmt = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" });
+  function nyToday() { return nyFmt.format(new Date()); }
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -112,7 +258,6 @@
     var n = Math.round((today - d) / DAY);
     return n <= 0 ? "today" : n === 1 ? "yesterday" : n + " days ago";
   }
-  function foundKey(r) { return r.found_at || r.first_seen || ""; }
   function found(r) {
     var t = r.found_at ? new Date(r.found_at) : null;
     if (t && !isNaN(t)) {
@@ -132,71 +277,6 @@
     try { var x = new URL(u); return x.protocol === "https:" && (!host || x.hostname === host) ? x.href : null; }
     catch (e) { return null; }
   }
-  function state(text) { list.textContent = ""; list.appendChild(el("p", "state", text)); }
-
-  function card(r) {
-    var c = el("article", "card");
-    var photo = r.photo && safeUrl(r.photo);
-    if (photo) {
-      var img = el("img", "photo");
-      img.src = photo; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
-      img.referrerPolicy = "no-referrer";
-      img.onerror = function () { var ph = el("div", "photo nophoto", "No photo"); img.replaceWith(ph); };
-      c.appendChild(img);
-    } else {
-      c.appendChild(el("div", "photo nophoto", "No photo"));
-    }
-    var b = el("div", "body");
-    var badges = el("div", "badges");
-    if (r._urgent) badges.appendChild(el("span", "badge", r.owner_direct ? "🔥 Owner direct" : "🔥 Just listed"));
-    if (badges.childNodes.length) b.appendChild(badges);
-
-    var top = el("div", "top");
-    var left = el("div");
-    left.appendChild(el("div", "addr", r.address || "Address unknown"));
-    if (r.area) left.appendChild(el("div", "area", r.area));
-    top.appendChild(left);
-    var rent = el("div", "rent");
-    var dropped = typeof r.prev_rent === "number" && typeof r.rent === "number" && r.prev_rent > r.rent;
-    if (dropped) rent.appendChild(el("s", null, money(r.prev_rent)));
-    rent.appendChild(el("span", dropped ? "dropped" : null, money(r.rent)));
-    top.appendChild(rent);
-    b.appendChild(top);
-
-    var facts = el("div", "facts");
-    if (r.beds != null) facts.appendChild(el("span", null, r.beds === 0 ? "Studio" : r.beds + " BR"));
-    if (r.baths != null) facts.appendChild(el("span", null, r.baths + " bath"));
-    if (r.sqft != null) facts.appendChild(el("span", null, r.sqft.toLocaleString("en-US") + " ft²"));
-    if (r.walk_min != null) facts.appendChild(el("span", null, "~" + r.walk_min + " min walk"));
-    if (facts.childNodes.length) b.appendChild(facts);
-
-    var meta = el("dl", "meta");
-    function row(k, v) { meta.appendChild(el("dt", null, k)); meta.appendChild(el("dd", null, v)); }
-    if (r.available) row("Available", day(r.available));
-    if (r.listed) row("Published", day(r.listed) + (ago(r.listed) ? " · " + ago(r.listed) : ""));
-    else row("Published", "Unknown");
-    var f = found(r);
-    if (f) row("Found", f);
-    row("Fee", r.no_fee === true ? "No fee ✓" : r.no_fee === false ? "Broker fee" : "Unknown");
-    b.appendChild(meta);
-
-    if (r.amenities && r.amenities.length) {
-      var chips = el("div", "chips");
-      r.amenities.forEach(function (a) { chips.appendChild(el("span", "chip", a)); });
-      b.appendChild(chips);
-    }
-    if (r.unknowns && r.unknowns.length) b.appendChild(el("div", "unknown", "Unknown: " + r.unknowns.join(", ")));
-
-    var url = r.url && safeUrl(r.url, "streeteasy.com");
-    if (url) {
-      var a = el("a", "open", "Open on StreetEasy");
-      a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
-      b.appendChild(a);
-    }
-    c.appendChild(b);
-    return c;
-  }
-
   function nyTime(iso) {
     var when = iso ? new Date(iso) : null;
     return when && !isNaN(when)
@@ -205,52 +285,164 @@
       : "unknown";
   }
 
-  function unitCard(r) {
-    var c = el("article", "card");
-    var b = el("div", "body");
-    var top = el("div", "top");
-    var left = el("div");
-    left.appendChild(el("div", "addr", r.building + (r.unit ? (/^[0-9A-Za-z-]+$/.test(r.unit) ? " #" : " · ") + r.unit : "")));
-    left.appendChild(el("div", "area", [r.address, r.landlord].filter(Boolean).join(" · ")));
-    top.appendChild(left);
-    var rent = el("div", "rent");
-    rent.appendChild(el("span", null, money(r.rent)));
-    if (r.rent_note) rent.appendChild(el("small", null, r.rent_note));
-    top.appendChild(rent);
-    b.appendChild(top);
+  // ---- state ----
+  function sanitize(s) {
+    try { return F.fromHash(F.toHash(s), F.DEFAULTS); } catch (e) { return null; }
+  }
+  function loadSaved() {
+    try {
+      var raw = window.localStorage.getItem(STORE);
+      return raw ? sanitize(JSON.parse(raw)) : null;
+    } catch (e) { return null; }
+  }
+  var state = F.initialState(location.hash, loadSaved());
 
-    var facts = el("div", "facts");
-    if (r.beds != null) facts.appendChild(el("span", null, r.beds === 0 ? "Studio" : r.beds + " BR"));
-    if (r.baths != null) facts.appendChild(el("span", null, r.baths + " bath"));
-    facts.appendChild(el("span", null, r.sqft != null ? r.sqft.toLocaleString("en-US") + " ft²" : "Size not listed"));
-    if (r.floor != null) facts.appendChild(el("span", null, "Floor " + r.floor));
-    if (r.walk_min != null) facts.appendChild(el("span", null, "~" + r.walk_min + " min walk"));
-    b.appendChild(facts);
+  function syncAddress() {
+    var h = F.toHash(state);
+    history.replaceState(null, "", h ? h : location.pathname + location.search);
+  }
+  try { syncAddress(); } catch (e) { /* replaceState unavailable */ }
 
-    var meta = el("dl", "meta");
-    function row(k, v, cls) { meta.appendChild(el("dt", null, k)); meta.appendChild(el("dd", cls || null, v)); }
-    if (r.available_now) row("Available", "Now", "now");
-    else row("Available", r.available ? day(r.available) : "Not listed");
-    var f = found(r);
-    if (f) row("Found", f);
-    row("Fee", "Not stated · listed by the landlord");
-    b.appendChild(meta);
+  function commit(next) {
+    state = next;
+    try { window.localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) { /* private mode */ }
+    syncAddress();
+    render();
+  }
+  function change(field, value) {
+    var next = F.fromHash("", state);
+    next[field] = value;
+    commit(next);
+  }
 
-    var url = r.url && safeUrl(r.url, HOSTS[r.landlord]);
-    if (url) {
-      var a = el("a", "open", "Open on " + r.landlord + " site");
-      a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
-      b.appendChild(a);
+  // ---- cards ----
+  function tagsFor(it, today) {
+    var r = it.rec, tags = el("div", "tags");
+    function tag(text, cls) { tags.appendChild(el("span", "tag" + (cls ? " " + cls : ""), text)); }
+    if (r.beds != null) tag(r.beds === 0 ? "Studio" : r.beds + "BR");
+    if (r.walk_min != null) tag(r.walk_min + " min walk");
+    var a = F.availability(it, today);
+    if (a === "now") tag("Available now", "now");
+    else if (a) tag("Avail. " + day(a));
+    if (r.area) tag(r.area);
+    if (F.foundDay(it) === today) tag("New", "new");
+    tag(it.source === "streeteasy" ? "StreetEasy" : r.landlord || "Landlord", "src");
+    return tags;
+  }
+
+  function thumb(it) {
+    var r = it.rec, box = el("div", "thumb");
+    if (it.source === "building") {
+      box.appendChild(el("div", "initials", initials(r.building)));
+      return box;
     }
-    c.appendChild(b);
+    var photo = r.photo && safeUrl(r.photo);
+    if (photo) {
+      var img = el("img");
+      img.src = photo; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
+      img.referrerPolicy = "no-referrer";
+      img.onerror = function () { img.replaceWith(el("div", "nophoto", "No photo")); };
+      box.appendChild(img);
+    } else {
+      box.appendChild(el("div", "nophoto", "No photo"));
+    }
+    return box;
+  }
+
+  function initials(name) {
+    var out = "";
+    String(name || "").split(/[\s:]+/).forEach(function (w) {
+      if (!w || /^the$/i.test(w) || out.length >= 3) return;
+      out += /^\d/.test(w) ? w.match(/^\d+/)[0] : w.charAt(0).toUpperCase();
+    });
+    return out.slice(0, 4) || "?";
+  }
+
+  function card(it, today) {
+    var r = it.rec, isUnit = it.source === "building";
+    var c = el("article", "card");
+    var row = el("div", "row");
+    row.appendChild(thumb(it));
+    var main = el("div", "main");
+
+    if (!isUnit && r._urgent) {
+      var badges = el("div", "badges");
+      badges.appendChild(el("span", "badge", r.owner_direct ? "🔥 Owner direct" : "🔥 Just listed"));
+      main.appendChild(badges);
+    }
+    var price = el("div", "price");
+    var dropped = !isUnit && typeof r.prev_rent === "number" && typeof r.rent === "number" && r.prev_rent > r.rent;
+    price.appendChild(el("span", "rent" + (dropped ? " dropped" : ""), money(r.rent)));
+    if (dropped) price.appendChild(el("s", null, money(r.prev_rent)));
+    main.appendChild(price);
+    if (isUnit && r.rent_note) main.appendChild(el("small", "note", r.rent_note));
+
+    var title = isUnit
+      ? r.building + (r.unit ? (/^[0-9A-Za-z-]+$/.test(r.unit) ? " #" : " · ") + r.unit : "")
+      : r.address || "Address unknown";
+    var t = el("div", "title", title);
+    t.title = title;
+    main.appendChild(t);
+    if (isUnit && r.address) main.appendChild(el("div", "subtitle", r.address));
+    main.appendChild(tagsFor(it, today));
+    row.appendChild(main);
+    c.appendChild(row);
+
+    var foot = el("div", "foot");
+    var more = el("details", "more");
+    more.appendChild(el("summary", null, "More"));
+    var meta = el("dl", "meta");
+    function line(k, v, cls) { meta.appendChild(el("dt", null, k)); meta.appendChild(el("dd", cls || null, v)); }
+    if (r.baths != null) line("Baths", String(r.baths));
+    if (isUnit) line("Size", r.sqft != null ? r.sqft.toLocaleString("en-US") + " ft²" : "Size not listed");
+    else if (r.sqft != null) line("Size", r.sqft.toLocaleString("en-US") + " ft²");
+    if (r.floor != null) line("Floor", String(r.floor));
+    if (isUnit) {
+      if (r.available_now) line("Available", "Now", "ok");
+      else line("Available", r.available ? day(r.available) : "Not listed");
+    } else if (r.available) {
+      line("Available", day(r.available));
+    }
+    if (!isUnit) {
+      if (r.listed) line("Published", day(r.listed) + (ago(r.listed) ? " · " + ago(r.listed) : ""));
+      else line("Published", "Unknown");
+    }
+    var f = found(r);
+    if (f) line("Found", f);
+    if (isUnit) line("Fee", "Not stated · listed by the landlord");
+    else line("Fee", r.no_fee === true ? "No fee ✓" : r.no_fee === false ? "Broker fee" : "Unknown", r.no_fee === true ? "ok" : null);
+    if (isUnit && r.landlord) line("Landlord", r.landlord);
+    more.appendChild(meta);
+    if (r.amenities && r.amenities.length) {
+      var chips = el("div", "chips");
+      r.amenities.forEach(function (a) { chips.appendChild(el("span", "chip", a)); });
+      more.appendChild(chips);
+    }
+    if (r.unknowns && r.unknowns.length) more.appendChild(el("div", "unknown", "Unknown: " + r.unknowns.join(", ")));
+    foot.appendChild(more);
+
+    var url = isUnit ? r.url && safeUrl(r.url, HOSTS[r.landlord]) : r.url && safeUrl(r.url, "streeteasy.com");
+    if (url) {
+      var a = el("a", "srclink", isUnit ? r.landlord + " site ↗" : "StreetEasy ↗");
+      a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      a.setAttribute("aria-label", "Open on " + (isUnit ? r.landlord + " site" : "StreetEasy"));
+      foot.appendChild(a);
+    }
+    c.appendChild(foot);
     return c;
   }
 
   function sourcesBox(feed) {
-    var box = el("div", "sources");
-    box.appendChild(el("div", null, "Read straight from each landlord's site · studios & 1BR, $3,000–5,500"));
+    var box = el("details", "sources");
+    var sources = feed.sources || [];
+    var bad = sources.filter(function (s) { return !s.ok; }).length;
+    var head = el("summary", null, "Read straight from each landlord's site · studios & 1BR, $3,000–5,500");
+    head.appendChild(el("span", "status" + (bad ? " bad" : ""),
+      (sources.length - bad) + " of " + sources.length + " sites checked" +
+      (bad ? " · " + bad + " couldn't be checked this time, showing last known units" : "")));
+    box.appendChild(head);
     var ul = el("ul");
-    (feed.sources || []).forEach(function (s) {
+    sources.forEach(function (s) {
       var li = s.ok
         ? el("li", null, s.building + " — " + s.matches + " of " + s.units_listed + " listed units match")
         : el("li", "bad", s.building + " — couldn't check this time, showing last known units");
@@ -260,45 +452,232 @@
     return box;
   }
 
-  function current() { return location.hash === "#buildings" ? "buildings" : "streeteasy"; }
+  // ---- filter controls ----
+  function seg(label, options, current, onPick) {
+    var g = el("div", "seg");
+    g.setAttribute("role", "group");
+    g.setAttribute("aria-label", label);
+    options.forEach(function (o) {
+      var b = el("button", null, o[1]);
+      b.type = "button";
+      b.setAttribute("aria-pressed", o[0] === current ? "true" : "false");
+      b.addEventListener("click", function () { onPick(o[0]); });
+      g.appendChild(b);
+    });
+    return g;
+  }
+  function group(label, body) {
+    var g = el("div", "group");
+    g.appendChild(el("div", "glabel", label));
+    g.appendChild(body);
+    return g;
+  }
+  function select(label, options, current, onPick) {
+    var s = el("select");
+    s.setAttribute("aria-label", label);
+    options.forEach(function (o) {
+      var opt = el("option", null, o[1]);
+      opt.value = String(o[0]);
+      s.appendChild(opt);
+    });
+    s.value = String(current);
+    s.addEventListener("change", function () { onPick(s.value); });
+    return s;
+  }
+  function nextMonths(today, n) {
+    var y = +today.slice(0, 4), m = +today.slice(5, 7), out = [];
+    for (var i = 0; i < n; i++) {
+      out.push([y + "-" + (m < 10 ? "0" : "") + m, "By " + MONTHS[m - 1] + " " + y]);
+      m += 1; if (m > 12) { m = 1; y += 1; }
+    }
+    return out;
+  }
+
+  // Controls are rebuilt on each render; keep keyboard focus on the same control.
+  function focusKey(n) {
+    if (!n || !controls.contains(n)) return null;
+    var g = n.parentNode && n.parentNode.getAttribute("aria-label");
+    return (n.getAttribute("aria-label") || "") + "|" + (g || "") + "|" + (n.tagName === "SELECT" ? "" : n.firstChild && n.firstChild.textContent);
+  }
+  function buildControls(tabItems, today) {
+    var keep = focusKey(document.activeElement);
+    buildControlsInto(tabItems, today);
+    if (!keep) return;
+    var all = controls.querySelectorAll("button, select");
+    for (var i = 0; i < all.length; i++) if (focusKey(all[i]) === keep) { all[i].focus(); return; }
+  }
+
+  function buildControlsInto(tabItems, today) {
+    controls.textContent = "";
+    controls.appendChild(group("Type", seg("Type", [["both", "Both"], ["studio", "Studio"], ["1br", "1BR"]], state.type,
+      function (v) { change("type", v); })));
+
+    var priceOpts = PRICES.map(function (v) { return [v, money(v)]; });
+    var pair = el("div", "pair");
+    pair.appendChild(select("Minimum rent", priceOpts, state.min, function (v) { change("min", +v); }));
+    pair.appendChild(el("span", "dash", "–"));
+    pair.appendChild(select("Maximum rent", priceOpts, state.max, function (v) { change("max", +v); }));
+    controls.appendChild(group("Price", pair));
+
+    var counts = F.areaCounts(tabItems);
+    state.areas.forEach(function (a) {
+      if (!counts.some(function (c) { return c.area === a; })) counts.push({ area: a, n: 0 });
+    });
+    var chips = el("div", "tchips");
+    chips.setAttribute("role", "group");
+    chips.setAttribute("aria-label", "Neighborhood");
+    counts.forEach(function (c) {
+      var on = state.areas.indexOf(c.area) >= 0;
+      var b = el("button", "tchip", c.area);
+      b.type = "button";
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.appendChild(el("span", "n", String(c.n)));
+      b.addEventListener("click", function () {
+        var next = state.areas.filter(function (a) { return a !== c.area; });
+        if (!on) next.push(c.area);
+        change("areas", next);
+      });
+      chips.appendChild(b);
+    });
+    controls.appendChild(group("Neighborhood", chips));
+
+    controls.appendChild(group("Walk", seg("Walk", [[0, "Any"], [10, "≤10"], [15, "≤15"], [20, "≤20 min"]], state.walk,
+      function (v) { change("walk", v); })));
+
+    var months = nextMonths(today, 6);
+    var isMonth = /^\d{4}-\d{2}$/.test(state.avail);
+    if (isMonth && !months.some(function (m) { return m[0] === state.avail; })) {
+      months.push([state.avail, "By " + MONTHS[+state.avail.slice(5, 7) - 1] + " " + state.avail.slice(0, 4)]);
+    }
+    var arow = el("div", "availrow");
+    arow.appendChild(seg("Available", [["any", "Any"], ["now", "Now"]], state.avail, function (v) { change("avail", v); }));
+    var ms = select("Available by month", [["", "By month…"]].concat(months), isMonth ? state.avail : "",
+      function (v) { change("avail", v || "any"); });
+    if (isMonth) ms.className = "on";
+    arow.appendChild(ms);
+    controls.appendChild(group("Available", arow));
+
+    controls.appendChild(group("Found", seg("Found", [["any", "Any"], ["today", "Today"], ["3d", "3 days"]], state.found,
+      function (v) { change("found", v); })));
+  }
+
+  function removeChip(key) {
+    var next = F.fromHash("", state), D = F.DEFAULTS;
+    if (key === "price") { next.min = D.min; next.max = D.max; }
+    else if (key.indexOf("area:") === 0) {
+      var name = key.slice(5);
+      next.areas = next.areas.filter(function (a) { return a !== name; });
+    } else { next[key] = D[key]; }
+    commit(next);
+  }
+  function clearAll() { commit(F.clearFilters(state)); }
+
+  function buildActive(chips) {
+    var box = document.getElementById("active");
+    box.textContent = "";
+    chips.forEach(function (c) {
+      var b = el("button", "achip", c.label);
+      b.type = "button";
+      b.setAttribute("aria-label", "Remove filter: " + c.label);
+      b.appendChild(el("span", "x", "×"));
+      b.addEventListener("click", function () { removeChip(c.key); });
+      box.appendChild(b);
+    });
+    if (chips.length) {
+      var clr = el("button", "link", "Clear");
+      clr.type = "button";
+      clr.addEventListener("click", clearAll);
+      box.appendChild(clr);
+    }
+  }
+
+  // ---- render ----
+  function tabItemsFor(tab) {
+    if (tab === "streeteasy") return items.streeteasy;
+    if (tab === "buildings") return items.buildings;
+    return items.streeteasy.concat(items.buildings);
+  }
+  function setCount(tab, n) {
+    document.querySelector('.tab[data-tab="' + tab + '"] .n').textContent = n == null ? "" : String(n);
+  }
+  function lastChecked(tab) {
+    var times = [];
+    if (tab !== "buildings" && feeds.streeteasy) times.push(feeds.streeteasy.checked_at || "");
+    if (tab !== "streeteasy" && feeds.buildings) times.push(feeds.buildings.checked_at || "");
+    times.sort();
+    return times.length ? times[times.length - 1] : null;
+  }
+  function emptyState(title, text, withClear) {
+    var box = el("div", "state");
+    if (title) box.appendChild(el("strong", null, title));
+    if (text) box.appendChild(el("p", null, text));
+    if (withClear) {
+      var b = el("button", "btn primary", "Clear filters");
+      b.type = "button";
+      b.addEventListener("click", clearAll);
+      box.appendChild(b);
+    }
+    list.appendChild(box);
+  }
 
   function render() {
-    var name = current();
+    var today = nyToday(), tab = state.tab;
     tabs.forEach(function (b) {
-      var on = b.getAttribute("data-tab") === name;
+      var on = b.getAttribute("data-tab") === tab;
       b.setAttribute("aria-selected", on ? "true" : "false"); b.tabIndex = on ? 0 : -1;
       if (on) list.setAttribute("aria-labelledby", b.id);
     });
-    var feed = feeds[name];
+    sortSel.value = state.sort;
+
+    var tabItems = tabItemsFor(tab);
+    var shown = F.sortItems(tabItems.filter(function (it) { return F.matches(it, state, today); }), state.sort, today);
+    var chips = F.activeChips(state);
+
+    buildControls(tabItems, today);
+    buildActive(chips);
+    openBtn.textContent = "Filters";
+    if (chips.length) openBtn.appendChild(el("span", "k", String(chips.length)));
+    document.getElementById("show").textContent = shown.length === 1 ? "Show 1 apartment" : "Show " + shown.length + " apartments";
+
+    var count = document.getElementById("count");
+    count.textContent = "";
+    count.appendChild(el("b", null, String(shown.length)));
+    count.appendChild(document.createTextNode(" of " + tabItems.length + " shown"));
+
+    var needed = tab === "all" ? ["streeteasy", "buildings"] : [tab];
+    var loading = needed.some(function (k) { return feeds[k] === undefined; });
+    var failed = needed.filter(function (k) { return feeds[k] === null; });
+    var at = lastChecked(tab);
+    checked.textContent = at != null ? "Last checked " + nyTime(at) : loading ? "Loading…" : "";
+
+    topBox.textContent = "";
+    failed.forEach(function (k) {
+      topBox.appendChild(el("div", "warn", k === "buildings" ? "Couldn't load building units. Pull to refresh." : "Couldn't load listings. Pull to refresh."));
+    });
+    if (tab === "buildings" && feeds.buildings) topBox.appendChild(sourcesBox(feeds.buildings));
+
     list.textContent = "";
-    if (feed === undefined) { checked.textContent = "Loading…"; return; }
-    if (feed === null) {
-      checked.textContent = "";
-      state(name === "buildings" ? "Couldn't load building units. Pull to refresh." : "Couldn't load listings. Pull to refresh.");
+    if (!tabItems.length) {
+      if (loading) emptyState(null, "Loading…");
+      else if (failed.length === needed.length) return;
+      else emptyState(null, tab === "buildings" ? "No matching units on these sites right now." : "No apartments yet.");
       return;
     }
-    checked.textContent = "Last checked " + nyTime(feed.checked_at);
-    if (name === "buildings") {
-      list.appendChild(sourcesBox(feed));
-      if (!units.length) { list.appendChild(el("p", "state", "No matching units on these sites right now.")); return; }
-      list.appendChild(el("p", "hint", "Newest found first, then cheapest"));
-      units.forEach(function (r) { list.appendChild(unitCard(r)); });
+    if (!shown.length) {
+      emptyState("No apartments match these filters.", "0 of " + tabItems.length + " shown. Clear them to see everything.", true);
       return;
     }
-    if (!rows.length) { state("No apartments yet."); return; }
-    list.appendChild(el("p", "hint", "Newest found first"));
-    rows.forEach(function (r) { list.appendChild(card(r)); });
+    shown.forEach(function (it) {
+      if (!it.node) it.node = card(it, today);
+      list.appendChild(it.node);
+    });
   }
 
-  function count(name, n) {
-    document.querySelector('.tab[data-tab="' + name + '"] .n').textContent = n == null ? "" : String(n);
-  }
-
+  // ---- events ----
   tabs.forEach(function (b) {
     b.addEventListener("click", function () {
       var name = b.getAttribute("data-tab");
-      history.replaceState(null, "", name === "streeteasy" ? location.pathname + location.search : "#" + name);
-      render(); window.scrollTo(0, 0);
+      if (name !== state.tab) { change("tab", name); window.scrollTo(0, 0); }
     });
   });
   document.querySelector(".tabs").addEventListener("keydown", function (e) {
@@ -308,33 +687,51 @@
     var next = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
     next.focus(); next.click();
   });
-  window.addEventListener("hashchange", render);
+  sortSel.addEventListener("change", function () { change("sort", sortSel.value); });
+
+  function setPanel(open) {
+    panel.classList.toggle("is-open", open);
+    document.body.classList.toggle("locked", open);
+    openBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) document.getElementById("panel-close").focus();
+    else openBtn.focus();
+  }
+  openBtn.addEventListener("click", function () { setPanel(true); });
+  document.getElementById("panel-close").addEventListener("click", function () { setPanel(false); });
+  document.getElementById("show").addEventListener("click", function () { setPanel(false); window.scrollTo(0, 0); });
+  document.getElementById("panel-clear").addEventListener("click", clearAll);
+  document.getElementById("foot-clear").addEventListener("click", clearAll);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && panel.classList.contains("is-open")) setPanel(false);
+  });
+  window.addEventListener("hashchange", function () { commit(F.initialState(location.hash, state)); });
   render();
 
   function load(file) {
     return fetch(file, { cache: "no-store" })
       .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); });
   }
+  function updateAllCount() {
+    var done = feeds.streeteasy !== undefined && feeds.buildings !== undefined;
+    setCount("all", done ? items.streeteasy.length + items.buildings.length : null);
+  }
 
   load("listings.json")
     .then(function (feed) {
-      rows = (feed.listings || []).filter(function (r) { return r.source !== "facebook"; }).map(function (r, i) { r._urgent = isUrgent(r); r._i = i; return r; });
-      rows.sort(function (a, b) {  // newest pull first; feed order (strongest first) within a pull
-        return foundKey(b).localeCompare(foundKey(a)) || a._i - b._i;
-      });
-      feeds.streeteasy = feed; count("streeteasy", rows.length); render();
+      var rows = (feed.listings || []).filter(function (r) { return r.source !== "facebook"; });
+      items.streeteasy = rows.map(function (r, i) { r._urgent = isUrgent(r); return F.normalize(r, "streeteasy", i); });
+      feeds.streeteasy = feed; setCount("streeteasy", rows.length);
     })
-    .catch(function () { feeds.streeteasy = null; render(); });
+    .catch(function () { feeds.streeteasy = null; })
+    .then(function () { updateAllCount(); render(); });
 
   load("buildings.json")
     .then(function (feed) {
-      units = (feed.units || []).slice();
-      units.sort(function (a, b) {  // newest pull first, cheapest first within a pull
-        return foundKey(b).localeCompare(foundKey(a)) || (a.rent || 1e9) - (b.rent || 1e9);
-      });
-      feeds.buildings = feed; count("buildings", units.length); render();
+      items.buildings = (feed.units || []).map(function (r, i) { return F.normalize(r, "building", i); });
+      feeds.buildings = feed; setCount("buildings", items.buildings.length);
     })
-    .catch(function () { feeds.buildings = null; render(); });
+    .catch(function () { feeds.buildings = null; })
+    .then(function () { updateAllCount(); render(); });
 })();
 </script>
 </body>
