@@ -1,0 +1,219 @@
+{
+ "units": [
+  {
+   "building": "433-west-24-street-new_york",
+   "unit": "2FF",
+   "state": "tour_booked",
+   "date": "2026-11-28",
+   "time": "15:20",
+   "notes": [
+    "Moved from 15:00 to 15:20"
+   ]
+  },
+  {
+   "building": "110-9-avenue-new_york",
+   "unit": "3A",
+   "state": "tour_booked",
+   "date": "2026-11-29",
+   "time": "11:00",
+   "notes": [
+    "The 11/25 showing was cancelled; this is the new slot"
+   ]
+  },
+  {
+   "building": "110-9-avenue-new_york",
+   "unit": "3Z",
+   "state": "tour_requested",
+   "date": "2026-11-29",
+   "notes": [
+    "Asked for Sun 10:00 or any time; not confirmed"
+   ]
+  },
+  {
+   "building": "chelsea-tower",
+   "unit": "21G",
+   "state": "tour_booked",
+   "date": "2026-11-28",
+   "time": "12:15",
+   "notes": [
+    "$5,200, available now"
+   ]
+  },
+  {
+   "building": "chelsea-tower",
+   "unit": "6H",
+   "state": "dropped",
+   "date": "2026-11-24",
+   "notes": [
+    "Rented"
+   ]
+  },
+  {
+   "address": "515 West 38th Street",
+   "unit": "23J",
+   "state": "tour_booked",
+   "date": "2026-11-29",
+   "time": "12:30"
+  },
+  {
+   "address": "315 West 33rd Street",
+   "unit": "17A",
+   "state": "tour_booked",
+   "date": "2026-11-28",
+   "time": "11:00"
+  },
+  {
+   "building": "225-west-23-street-new_york",
+   "unit": "225-1R",
+   "state": "tour_requested",
+   "date": "2026-11-29",
+   "time": "14:00",
+   "notes": [
+    "Request only, not confirmed"
+   ]
+  },
+  {
+   "building": "ruby-chelsea",
+   "unit": "N19P",
+   "state": "dropped",
+   "date": "2026-11-24"
+  },
+  {
+   "building": "3-eleven",
+   "address": "311 11th Avenue",
+   "unit": "1920",
+   "state": "visited",
+   "date": "2026-11-25",
+   "time": "12:00"
+  }
+ ],
+ "buildings": [
+  {
+   "name": "144 West 23rd Street",
+   "dir": "b11",
+   "building": "144-west-23-street-new_york",
+   "address": "144 West 23rd Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "225 West 23rd Street",
+   "dir": "b35",
+   "building": "225-west-23-street-new_york",
+   "address": "225 West 23rd Street",
+   "state": "tour_requested",
+   "date": "2026-11-29",
+   "time": "14:00"
+  },
+  {
+   "name": "3 Eleven",
+   "dir": "b51",
+   "building": "3-eleven",
+   "address": "311 Eleventh Avenue, New York, NY 10001",
+   "state": "visited",
+   "date": "2026-11-25",
+   "time": "12:00"
+  },
+  {
+   "name": "Chelsea Centro",
+   "dir": "b81",
+   "address": "200 West 26th Street, New York, NY 10001",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b85",
+   "address": "415 West 23rd Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b86",
+   "address": "420 West 24th Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b87",
+   "address": "425 West 23rd Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b88",
+   "address": "430 West 24th Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b89",
+   "address": "435 West 23rd Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b90",
+   "address": "440 West 24th Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b91",
+   "address": "445 West 23rd Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b92",
+   "address": "450 West 24th Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b93",
+   "address": "455 West 23rd Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "London Terrace Gardens",
+   "dir": "b94",
+   "address": "460 West 24th Street",
+   "state": "contacted",
+   "date": "2026-11-25"
+  },
+  {
+   "name": "Ohm",
+   "dir": "b96",
+   "address": "312 Eleventh Avenue, New York, NY 10001",
+   "state": "tour_booked",
+   "date": "2026-11-28",
+   "time": "13:30"
+  },
+  {
+   "name": "Ruby",
+   "dir": "b115",
+   "building": "ruby-chelsea",
+   "address": "243 W 28th Street, New York, NY 10001",
+   "state": "dropped",
+   "date": "2026-11-24"
+  },
+  {
+   "name": "The Olivia",
+   "dir": "b117",
+   "address": "315 W 33rd Street, New York, NY 10001",
+   "state": "tour_booked",
+   "date": "2026-11-28",
+   "time": "11:00"
+  }
+ ]
+}

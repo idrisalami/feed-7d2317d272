@@ -7,7 +7,7 @@
 
   L.DEFAULTS = {
     tab: "all", type: "both", min: 3000, max: 5500, areas: [],
-    walk: 0, avail: "any", found: "any", sort: "newest"
+    walk: 0, avail: "any", found: "any", status: "any", sort: "newest"
   };
 
   var PRICE_STEPS = [];
@@ -16,7 +16,8 @@
   function copy(s) {
     var o = {};
     for (var k in s) o[k] = s[k];
-    o.areas = s.areas.slice();
+    for (var d in L.DEFAULTS) if (o[d] === undefined) o[d] = L.DEFAULTS[d];
+    o.areas = (o.areas || []).slice();
     return o;
   }
 
@@ -102,7 +103,109 @@
       if (state.found === "today" && f !== today) return false;
       if (state.found === "3d" && f < minusDays(today, 2)) return false;
     }
+    if (state.status && state.status !== "any" && L.stateOf(item) !== state.status) return false;
     return true;
+  };
+
+  // ---- Unit status (statuses.json) ----
+
+  L.STATES = ["contacted", "tour_requested", "tour_booked", "visited", "applied", "dropped"];
+  L.STATUS_LABELS = {
+    contacted: "Contacted", tour_requested: "Tour requested", tour_booked: "Tour booked",
+    visited: "Visited", applied: "Applied", dropped: "Dropped"
+  };
+
+  var ORDINALS = {
+    first: "1", second: "2", third: "3", fourth: "4", fifth: "5", sixth: "6",
+    seventh: "7", eighth: "8", ninth: "9", tenth: "10", eleventh: "11", twelfth: "12"
+  };
+  var STREET_WORDS = {
+    west: "w", east: "e", north: "n", south: "s",
+    street: "st", avenue: "ave", av: "ave"
+  };
+
+  // "110 Ninth Avenue #3Z" and "110 9th Ave" -> "110 9 ave".
+  L.streetKey = function (address) {
+    var s = String(address || "").toLowerCase().split("#")[0].split(",")[0].replace(/\./g, " ");
+    return s.split(/\s+/).filter(function (t) { return t; }).map(function (t) {
+      if (ORDINALS[t]) return ORDINALS[t];
+      if (STREET_WORDS[t]) return STREET_WORDS[t];
+      var m = /^(\d+)(st|nd|rd|th)$/.exec(t);
+      return m ? m[1] : t;
+    }).join(" ");
+  };
+
+  // "N07J" -> "n7j", "225-1R" -> "2251r".
+  L.unitKey = function (s) {
+    return String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "").replace(/(^|[^0-9])0+(?=[0-9])/g, "$1");
+  };
+
+  L.buildingId = function (rec) {
+    var m = /^\/building\/([^\/?#]+)/.exec(String((rec && rec.path) || ""));
+    return m ? m[1] : null;
+  };
+
+  L.listingUnit = function (rec) {
+    var addr = String((rec && rec.address) || ""), i = addr.indexOf("#");
+    if (i >= 0) return L.unitKey(addr.slice(i + 1).split(/\s/)[0]);
+    var parts = String((rec && rec.path) || "").split("/").filter(function (p) { return p; });
+    if (parts.length === 3 && parts[0] === "building") return L.unitKey(parts[2]);
+    return "";
+  };
+
+  function sameBuilding(entry, id, street) {
+    if (!entry || typeof entry !== "object") return false;
+    if (id && entry.building && entry.building === id) return true;
+    return !!(street && entry.address && L.streetKey(entry.address) === street);
+  }
+
+  L.statusFor = function (rec, statuses) {
+    var out = { unit: null, building: null, siblings: [] };
+    if (!statuses || typeof statuses !== "object") return out;
+    var units = Array.isArray(statuses.units) ? statuses.units : [];
+    var buildings = Array.isArray(statuses.buildings) ? statuses.buildings : [];
+    var id = L.buildingId(rec), street = L.streetKey(rec && rec.address), u = L.listingUnit(rec);
+    units.forEach(function (e) {
+      if (!sameBuilding(e, id, street)) return;
+      if (u && !out.unit && L.unitKey(e.unit) === u) out.unit = e;
+      else if (!u || L.unitKey(e.unit) !== u) out.siblings.push(e);
+    });
+    for (var i = 0; i < buildings.length; i++) {
+      if (sameBuilding(buildings[i], id, street)) { out.building = buildings[i]; break; }
+    }
+    return out;
+  };
+
+  // Siblings worth a line on the card: when the whole building is dropped, its dropped units add nothing.
+  L.shownSiblings = function (st) {
+    var sib = (st && Array.isArray(st.siblings)) ? st.siblings : [];
+    if (!(st && st.building && st.building.state === "dropped")) return sib;
+    return sib.filter(function (s) { return s.state !== "dropped"; });
+  };
+
+  L.stateOf = function (item) {
+    var st = item && item.st;
+    if (!st) return "none";
+    if (st.unit && st.unit.state) return st.unit.state;
+    if (st.building && st.building.state === "dropped") return "dropped";
+    return "none";
+  };
+
+  function isDropped(item) { return L.stateOf(item) === "dropped"; }
+
+  // "Sat, Nov 28, 12:15" / "Sun, Nov 29"; formatted in UTC so no timezone shifts the day.
+  L.statusWhen = function (s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String((s && s.date) || ""));
+    if (!m) return "";
+    var d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+    var out = d.toLocaleDateString("en-US", { timeZone: "UTC", weekday: "short", month: "short", day: "numeric" });
+    return s.time ? out + ", " + s.time : out;
+  };
+
+  L.statusCounts = function (items) {
+    var c = {};
+    items.forEach(function (i) { var k = L.stateOf(i); c[k] = (c[k] || 0) + 1; });
+    return c;
   };
 
   // Compare nullable values ascending, nulls last.
@@ -129,6 +232,8 @@
       };
     }
     return items.slice().sort(function (a, b) {
+      var da = isDropped(a), db = isDropped(b);
+      if (da !== db) return da ? 1 : -1;
       if (key) {
         var c = cmpNullable(key(a), key(b));
         if (c) return c;
@@ -147,14 +252,14 @@
     return out;
   };
 
-  var HASH_ORDER = ["tab", "type", "min", "max", "area", "walk", "avail", "found", "sort"];
+  var HASH_ORDER = ["tab", "type", "min", "max", "area", "walk", "avail", "found", "status", "sort"];
 
   L.toHash = function (state) {
     var D = L.DEFAULTS, parts = [];
     HASH_ORDER.forEach(function (k) {
       if (k === "area") {
         if (state.areas.length) parts.push("area=" + encodeURIComponent(state.areas.join(",")));
-      } else if (state[k] !== D[k]) {
+      } else if (state[k] !== undefined && state[k] !== D[k]) {
         parts.push(k + "=" + encodeURIComponent(state[k]));
       }
     });
@@ -185,6 +290,7 @@
     if (raw.walk != null && has(["0", "10", "15", "20"], raw.walk)) out.walk = +raw.walk;
     if (raw.avail != null && /^(any|now|\d{4}-\d{2})$/.test(raw.avail)) out.avail = raw.avail;
     if (has(["any", "today", "3d"], raw.found)) out.found = raw.found;
+    if (raw.status === "any" || raw.status === "none" || has(L.STATES, raw.status)) out.status = raw.status;
     if (has(["newest", "cheapest", "closest", "soonest"], raw.sort)) out.sort = raw.sort;
     if (raw.area != null) {
       var names = raw.area.split(",").filter(function (n) { return n; });
@@ -227,6 +333,9 @@
     }
     if (state.found !== D.found) {
       chips.push({ key: "found", label: state.found === "today" ? "Found today" : "Last 3 days" });
+    }
+    if (state.status && state.status !== D.status) {
+      chips.push({ key: "status", label: state.status === "none" ? "Not contacted" : (L.STATUS_LABELS[state.status] || state.status) });
     }
     return chips;
   };
