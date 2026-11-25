@@ -1,6 +1,157 @@
 {
- "checked_at": "2026-11-25T14:07:44+00:00",
+ "checked_at": "2026-11-25T18:06:53+00:00",
  "listings": [
+  {
+   "path": "/building/57-carmine-street-new_york/1a",
+   "url": "https://streeteasy.com/building/57-carmine-street-new_york/1a",
+   "address": "57 Carmine Street #1A",
+   "area": "West Village",
+   "rent": 3395,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-25",
+   "listed": "2026-11-25",
+   "walk_min": 20,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Fios available"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/b0ba51d922f3bc58dcb27bb532bf7abb-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-25",
+   "found_at": "2026-11-25T18:11:10+00:00"
+  },
+  {
+   "path": "/building/95-christopher-street-new_york/15b",
+   "url": "https://streeteasy.com/building/95-christopher-street-new_york/15b",
+   "address": "95 Christopher Street #15B",
+   "area": "West Village",
+   "rent": 5500,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-04",
+   "listed": "2026-11-24",
+   "walk_min": 13,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Hardwood floors",
+    "Doorman",
+    "Elevator",
+    "Fios available",
+    "Gym",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/54c3ed0f33479845b5c8c707bc3f524f-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-25",
+   "found_at": "2026-11-25T18:11:10+00:00"
+  },
+  {
+   "path": "/building/1-jane-street-new_york/2g",
+   "url": "https://streeteasy.com/building/1-jane-street-new_york/2g",
+   "address": "1 Jane Street #2G",
+   "area": "West Village",
+   "rent": 4450,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-24",
+   "listed": "2026-11-24",
+   "walk_min": 5,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Dishwasher",
+    "Elevator",
+    "Fios available",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/ecaa0b966419bc9093efe34deff5b8c0-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-25",
+   "found_at": "2026-11-25T18:11:10+00:00"
+  },
+  {
+   "path": "/building/277-west-11-street-new_york/6c",
+   "url": "https://streeteasy.com/building/277-west-11-street-new_york/6c",
+   "address": "277 West 11th Street #6C",
+   "area": "West Village",
+   "rent": 5500,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-18",
+   "listed": "2026-11-18",
+   "walk_min": 7,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Hardwood floors",
+    "Fios available",
+    "Laundry"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/f132b6e087e8eb99c6eeac533e8b3037-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-25",
+   "found_at": "2026-11-25T18:11:10+00:00"
+  },
+  {
+   "path": "/building/52-barrow-street-new_york/2w",
+   "url": "https://streeteasy.com/building/52-barrow-street-new_york/2w",
+   "address": "52 Barrow Street #2W",
+   "area": "West Village",
+   "rent": 5295,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-09-01",
+   "listed": "2026-09-01",
+   "walk_min": 15,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "View",
+    "Hardwood floors",
+    "Washer dryer",
+    "Doorman",
+    "Package room"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/bb459bd8254cfe864133a66aeab2484e-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-25",
+   "found_at": "2026-11-25T18:11:10+00:00"
+  },
   {
    "path": "/building/606w30-606-west-30th-street-new_york/10j",
    "url": "https://streeteasy.com/building/606w30-606-west-30th-street-new_york/10j",
@@ -1986,8 +2137,8 @@
    "url": "https://streeteasy.com/building/1-jane-street-new_york/1e",
    "address": "1 Jane Street #1E",
    "area": "West Village",
-   "rent": 4625,
-   "prev_rent": null,
+   "rent": 4575,
+   "prev_rent": 4625,
    "beds": 0,
    "baths": 1.0,
    "sqft": null,
@@ -4676,8 +4827,8 @@
    "url": "https://streeteasy.com/building/47_-49-morton-street-new_york/5e",
    "address": "47 Morton Street #5E",
    "area": "West Village",
-   "rent": 4350,
-   "prev_rent": null,
+   "rent": 4195,
+   "prev_rent": 4350,
    "beds": 0,
    "baths": 1.0,
    "sqft": null,
