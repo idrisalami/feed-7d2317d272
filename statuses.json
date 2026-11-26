@@ -97,7 +97,8 @@
     "Self-guided tour",
     "Confirmed by email 11/25",
     "Asked 11/26 about studios/1BRs ready in early December",
-    "Sidney 11/26: #2001 not available for December; offered studio #418 ($4,480) and 1BRs #501 ($5,625) and #604 ($5,882) for Saturday"
+    "Sidney 11/26: #2001 not available for December; offered studio #418 ($4,480) and 1BRs #501 ($5,625) and #604 ($5,882) for Saturday",
+    "Plan: see #418, #501 and #604 during the Saturday visit"
    ]
   },
   {
@@ -153,6 +154,29 @@
    "time": "12:30",
    "notes": [
     "Requested on StreetEasy 11/26 (Mon 11/30 12:30pm or any time)",
+    "Not confirmed"
+   ]
+  },
+  {
+   "building": "251-west-26-street-new_york",
+   "address": "251 West 26th Street",
+   "unit": "4B",
+   "state": "tour_requested",
+   "date": "2026-11-30",
+   "time": "13:00",
+   "notes": [
+    "Requested on StreetEasy 11/26 (Mon 11/30 1:00pm or any time)",
+    "Not confirmed"
+   ]
+  },
+  {
+   "address": "408 8th Avenue",
+   "unit": "203",
+   "state": "tour_requested",
+   "date": "2026-11-30",
+   "time": "13:30",
+   "notes": [
+    "Requested on StreetEasy 11/26 (Mon 11/30 1:30pm or any time)",
     "Not confirmed"
    ]
   }
