@@ -96,7 +96,8 @@
    "notes": [
     "Self-guided tour",
     "Confirmed by email 11/25",
-    "Asked 11/26 about studios/1BRs ready in early December"
+    "Asked 11/26 about studios/1BRs ready in early December",
+    "Sidney 11/26: #2001 not available for December; offered studio #418 ($4,480) and 1BRs #501 ($5,625) and #604 ($5,882) for Saturday"
    ]
   },
   {
@@ -113,11 +114,11 @@
    "building": "3-eleven",
    "address": "311 11th Avenue",
    "unit": "1118",
-   "state": "tour_requested",
-   "date": "2026-11-26",
+   "state": "visited",
+   "date": "2026-11-25",
    "notes": [
-    "Requested on StreetEasy 11/23 (Thu 11/26 3pm or any time)",
-    "Not confirmed"
+    "Seen during the 3 Eleven visit 11/25",
+    "StreetEasy tour request for Thu 11/26 3pm no longer needed"
    ]
   },
   {
@@ -128,6 +129,30 @@
    "date": "2026-11-29",
    "notes": [
     "Requested on StreetEasy 11/26 (Sun 11/29 2:30pm or any time)",
+    "Not confirmed"
+   ]
+  },
+  {
+   "building": "366-west-23-street-new_york",
+   "address": "366 West 23rd Street",
+   "unit": "2A",
+   "state": "tour_requested",
+   "date": "2026-11-30",
+   "time": "12:00",
+   "notes": [
+    "Requested on StreetEasy 11/26 (Mon 11/30 12:00pm or any time)",
+    "Not confirmed"
+   ]
+  },
+  {
+   "building": "226-west-15-street-new_york",
+   "address": "226 West 15th Street",
+   "unit": "1A",
+   "state": "tour_requested",
+   "date": "2026-11-30",
+   "time": "12:30",
+   "notes": [
+    "Requested on StreetEasy 11/26 (Mon 11/30 12:30pm or any time)",
     "Not confirmed"
    ]
   }
