@@ -1,6 +1,37 @@
 {
- "checked_at": "2026-11-26T14:07:12+00:00",
+ "checked_at": "2026-11-26T18:07:02+00:00",
  "listings": [
+  {
+   "path": "/building/600-washington/506",
+   "url": "https://streeteasy.com/building/600-washington/506",
+   "address": "600 Washington Street #506",
+   "area": "West Village",
+   "rent": 5417,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": 425,
+   "available": "2026-11-26",
+   "listed": "2026-09-01",
+   "walk_min": 16,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Central ac",
+    "Dishwasher",
+    "Concierge",
+    "Doorman",
+    "Elevator",
+    "Parking"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/22aa7a9461c0d0e4be39377159479d7b-p_e.webp",
+   "unknowns": [
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-26",
+   "found_at": "2026-11-26T18:12:20+00:00"
+  },
   {
    "path": "/building/225-west-23-street-new_york/2251r",
    "url": "https://streeteasy.com/building/225-west-23-street-new_york/2251r",
