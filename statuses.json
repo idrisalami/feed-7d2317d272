@@ -85,6 +85,39 @@
    "state": "visited",
    "date": "2026-11-25",
    "time": "12:00"
+  },
+  {
+   "building": "avalon-west-chelsea",
+   "address": "282 Eleventh Avenue",
+   "unit": "2001",
+   "state": "tour_booked",
+   "date": "2026-11-28",
+   "time": "14:30",
+   "notes": [
+    "Self-guided tour",
+    "Confirmed by email 11/25"
+   ]
+  },
+  {
+   "address": "312 Eleventh Avenue",
+   "unit": "22J",
+   "state": "tour_requested",
+   "date": "2026-11-27",
+   "notes": [
+    "Requested on StreetEasy 11/23 (Fri 11/27 9am or any time)",
+    "Not confirmed; Ohm building tour booked Sat 11/28 13:30"
+   ]
+  },
+  {
+   "building": "3-eleven",
+   "address": "311 11th Avenue",
+   "unit": "1118",
+   "state": "tour_requested",
+   "date": "2026-11-26",
+   "notes": [
+    "Requested on StreetEasy 11/23 (Thu 11/26 3pm or any time)",
+    "Not confirmed"
+   ]
   }
  ],
  "buildings": [
