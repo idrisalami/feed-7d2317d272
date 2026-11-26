@@ -95,7 +95,8 @@
    "time": "14:30",
    "notes": [
     "Self-guided tour",
-    "Confirmed by email 11/25"
+    "Confirmed by email 11/25",
+    "Asked 11/26 about studios/1BRs ready in early December"
    ]
   },
   {
@@ -116,6 +117,17 @@
    "date": "2026-11-26",
    "notes": [
     "Requested on StreetEasy 11/23 (Thu 11/26 3pm or any time)",
+    "Not confirmed"
+   ]
+  },
+  {
+   "building": "249-west-15-street-new_york",
+   "address": "247 West 15th Street",
+   "unit": "2F",
+   "state": "tour_requested",
+   "date": "2026-11-29",
+   "notes": [
+    "Requested on StreetEasy 11/26 (Sun 11/29 2:30pm or any time)",
     "Not confirmed"
    ]
   }
@@ -146,6 +158,15 @@
    "state": "visited",
    "date": "2026-11-25",
    "time": "12:00"
+  },
+  {
+   "name": "Avalon West Chelsea",
+   "dir": "b78",
+   "building": "avalon-west-chelsea",
+   "address": "282 Eleventh Avenue",
+   "state": "tour_booked",
+   "date": "2026-11-28",
+   "time": "14:30"
   },
   {
    "name": "Chelsea Centro",
