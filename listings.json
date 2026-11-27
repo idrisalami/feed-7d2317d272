@@ -1,6 +1,36 @@
 {
- "checked_at": "2026-11-27T14:07:14+00:00",
+ "checked_at": "2026-11-27T18:06:32+00:00",
  "listings": [
+  {
+   "path": "/building/207-west-11-street-new_york/1d",
+   "url": "https://streeteasy.com/building/207-west-11-street-new_york/1d",
+   "address": "207 West 11th Street #1D",
+   "area": "West Village",
+   "rent": 5075,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-15",
+   "listed": "2026-10-15",
+   "walk_min": 8,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Fios available",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/e43cb0d54627311018846f9a82dd7465-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-27",
+   "found_at": "2026-11-27T18:10:00+00:00"
+  },
   {
    "path": "/building/ohm-312-11th-avenue-new_york/22j",
    "url": "https://streeteasy.com/building/ohm-312-11th-avenue-new_york/22j",
@@ -2026,8 +2056,8 @@
    "url": "https://streeteasy.com/building/26-grove-street-new_york/1d",
    "address": "26 Grove Street #1D",
    "area": "West Village",
-   "rent": 4100,
-   "prev_rent": null,
+   "rent": 3995,
+   "prev_rent": 4100,
    "beds": 0,
    "baths": 1.0,
    "sqft": null,
