@@ -1,6 +1,102 @@
 {
- "checked_at": "2026-11-27T18:06:32+00:00",
+ "checked_at": "2026-11-27T23:06:47+00:00",
  "listings": [
+  {
+   "path": "/building/the-caroline-60-west-23-street-new_york/627",
+   "url": "https://streeteasy.com/building/the-caroline-60-west-23-street-new_york/627",
+   "address": "60 West 23rd Street #627",
+   "area": "Flatiron",
+   "rent": 4800,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-12-11",
+   "listed": "2026-11-27",
+   "walk_min": 14,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Central ac",
+    "View",
+    "Dishwasher",
+    "Hardwood floors",
+    "Bike room",
+    "Childrens playroom"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/05d51ad0547048db42a35fa8d7d8854a-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-27",
+   "found_at": "2026-11-27T23:11:51+00:00"
+  },
+  {
+   "path": "/building/the-murray-hill/1910",
+   "url": "https://streeteasy.com/building/the-murray-hill/1910",
+   "address": "115 East 34th Street #1910",
+   "area": "Murray Hill",
+   "rent": 5295,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-10-19",
+   "listed": "2026-10-19",
+   "walk_min": 34,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Private outdoor space",
+    "Dishwasher",
+    "Fireplace",
+    "Bike room",
+    "Concierge",
+    "Shared outdoor space"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/f922026f40918071de93d16d12600c55-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-27",
+   "found_at": "2026-11-27T23:11:51+00:00"
+  },
+  {
+   "path": "/building/124-east-24-street-new_york/1d",
+   "url": "https://streeteasy.com/building/124-east-24-street-new_york/1d",
+   "address": "124 East 24th Street #1D",
+   "area": "Flatiron",
+   "rent": 4975,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-27",
+   "listed": "2026-11-27",
+   "walk_min": 24,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Elevator",
+    "Fios available",
+    "Laundry",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/6a386f16ac5cc340641168d103e97302-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-27",
+   "found_at": "2026-11-27T23:11:51+00:00"
+  },
   {
    "path": "/building/207-west-11-street-new_york/1d",
    "url": "https://streeteasy.com/building/207-west-11-street-new_york/1d",
@@ -1025,8 +1121,8 @@
    "url": "https://streeteasy.com/building/7-east-30-street-new_york/11a",
    "address": "7 East 30th Street #11A",
    "area": "NoMad",
-   "rent": 4695,
-   "prev_rent": null,
+   "rent": 4550,
+   "prev_rent": 4695,
    "beds": 0,
    "baths": 1.0,
    "sqft": 550,
