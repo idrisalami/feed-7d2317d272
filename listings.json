@@ -1,6 +1,38 @@
 {
- "checked_at": "2026-11-26T18:07:02+00:00",
+ "checked_at": "2026-11-27T14:07:14+00:00",
  "listings": [
+  {
+   "path": "/building/ohm-312-11th-avenue-new_york/22j",
+   "url": "https://streeteasy.com/building/ohm-312-11th-avenue-new_york/22j",
+   "address": "312 11th Avenue #22J",
+   "area": "West Chelsea",
+   "rent": 5495,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-01",
+   "listed": "2026-11-01",
+   "walk_min": 23,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Private outdoor space",
+    "Bike room",
+    "Childrens playroom",
+    "Concierge",
+    "Shared outdoor space",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/8d15388f65f1ec33f6dcd0cdf39baeb1-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-27",
+   "found_at": "2026-11-27T14:11:10+00:00"
+  },
   {
    "path": "/building/600-washington/506",
    "url": "https://streeteasy.com/building/600-washington/506",
@@ -4140,8 +4172,8 @@
    "url": "https://streeteasy.com/building/777-6th-avenue/11b",
    "address": "777 6th Avenue #11B",
    "area": "Chelsea",
-   "rent": 4723,
-   "prev_rent": 4728,
+   "rent": 4718,
+   "prev_rent": 4723,
    "beds": 0,
    "baths": 1.0,
    "sqft": 525,
