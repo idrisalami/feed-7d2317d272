@@ -1,6 +1,69 @@
 {
- "checked_at": "2026-11-27T23:06:47+00:00",
+ "checked_at": "2026-11-28T05:54:33+00:00",
  "listings": [
+  {
+   "path": "/building/13-west-29-street-new_york/2f",
+   "url": "https://streeteasy.com/building/13-west-29-street-new_york/2f",
+   "address": "13 West 29th Street #2F",
+   "area": "NoMad",
+   "rent": 3195,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-27",
+   "listed": "2026-11-27",
+   "walk_min": 23,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": true,
+   "amenities": [
+    "Central ac",
+    "Private outdoor space",
+    "View",
+    "Hardwood floors",
+    "Laundry",
+    "Live in super"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/d56d6a32d008879f92e89d99b18fa93d-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-28",
+   "found_at": "2026-11-28T05:56:57+00:00"
+  },
+  {
+   "path": "/building/100-lexington-avenue-new_york/4",
+   "url": "https://streeteasy.com/building/100-lexington-avenue-new_york/4",
+   "address": "100 Lexington Avenue #4",
+   "area": "NoMad",
+   "rent": 2995,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-15",
+   "listed": "2026-11-11",
+   "walk_min": 28,
+   "no_fee": null,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Dishwasher",
+    "Hardwood floors",
+    "Fios available",
+    "Laundry",
+    "Doorman"
+   ],
+   "photo": "https://photos.zillowstatic.com/fp/afd78ad5e3d9a09743cff250f7b48ec4-p_e.webp",
+   "unknowns": [
+    "size unknown",
+    "no-fee status unknown"
+   ],
+   "first_seen": "2026-11-28",
+   "found_at": "2026-11-28T05:56:57+00:00"
+  },
   {
    "path": "corcoran:111091028",
    "url": "https://www.corcoran.com/listing/for-rent/777-6th-avenue-1a-manhattan-ny-10001/vow/111091028/regionId/1",
