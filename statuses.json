@@ -191,6 +191,30 @@
     "$3,795 1BR, Cooper & Cooper",
     "Not confirmed"
    ]
+  },
+  {
+   "address": "325 West 4th Street",
+   "unit": "3R",
+   "state": "tour_requested",
+   "date": "2026-12-01",
+   "time": "12:00",
+   "notes": [
+    "Requested on StreetEasy 11/27 (Tue 12/1 12pm or any time)",
+    "$3,695 1BR, Brown Harris Stevens",
+    "Not confirmed"
+   ]
+  },
+  {
+   "address": "322 West 14th Street",
+   "unit": "4A",
+   "state": "tour_requested",
+   "date": "2026-12-01",
+   "time": "12:30",
+   "notes": [
+    "Requested on StreetEasy 11/27 (Tue 12/1 12:30pm or any time)",
+    "$4,400 1BR, Metropolitan Property Group",
+    "Not confirmed"
+   ]
   }
  ],
  "buildings": [
