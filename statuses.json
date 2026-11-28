@@ -179,6 +179,18 @@
     "Requested on StreetEasy 11/26 (Mon 11/30 1:30pm or any time)",
     "Not confirmed"
    ]
+  },
+  {
+   "address": "239 9th Avenue",
+   "unit": "1D",
+   "state": "tour_requested",
+   "date": "2026-11-28",
+   "time": "16:10",
+   "notes": [
+    "Open house slot requested on StreetEasy 11/27 (Sat 11/28 ~4:10pm)",
+    "$3,795 1BR, Cooper & Cooper",
+    "Not confirmed"
+   ]
   }
  ],
  "buildings": [
