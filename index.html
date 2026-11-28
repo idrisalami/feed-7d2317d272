@@ -207,7 +207,7 @@
 <nav class="tabbar" aria-label="Source">
   <div class="wrap tabs" role="tablist">
     <button class="tab" role="tab" id="tab-all" aria-controls="list" data-tab="all">All <span class="n"></span></button>
-    <button class="tab" role="tab" id="tab-streeteasy" aria-controls="list" data-tab="streeteasy">StreetEasy <span class="n"></span></button>
+    <button class="tab" role="tab" id="tab-streeteasy" aria-controls="list" data-tab="streeteasy">Listings <span class="n"></span></button>
     <button class="tab" role="tab" id="tab-buildings" aria-controls="list" data-tab="buildings">Buildings <span class="n"></span></button>
   </div>
 </nav>
@@ -354,7 +354,8 @@
     else if (a) tag("Avail. " + day(a));
     if (r.area) tag(r.area);
     if (F.foundDay(it) === today) tag("New", "new");
-    tag(it.source === "streeteasy" ? "StreetEasy" : r.landlord || "Landlord", "src");
+    var info = F.sourceInfo(it.source);
+    tag(it.source === "building" ? r.landlord || "Landlord" : info ? info.name : "Listing", "src");
     return tags;
   }
 
@@ -465,11 +466,13 @@
     if (r.unknowns && r.unknowns.length) more.appendChild(el("div", "unknown", "Unknown: " + r.unknowns.join(", ")));
     foot.appendChild(more);
 
-    var url = isUnit ? r.url && safeUrl(r.url, HOSTS[r.landlord]) : r.url && safeUrl(r.url, "streeteasy.com");
+    var info = isUnit ? null : F.sourceInfo(it.source);
+    var url = isUnit ? r.url && safeUrl(r.url, HOSTS[r.landlord]) : info && r.url && safeUrl(r.url, info.host);
     if (url) {
-      var a = el("a", "srclink", isUnit ? r.landlord + " site ↗" : "StreetEasy ↗");
+      var name = isUnit ? r.landlord + " site" : info.name;
+      var a = el("a", "srclink", name + " ↗");
       a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
-      a.setAttribute("aria-label", "Open on " + (isUnit ? r.landlord + " site" : "StreetEasy"));
+      a.setAttribute("aria-label", "Open on " + name);
       foot.appendChild(a);
     }
     c.appendChild(foot);
@@ -784,7 +787,7 @@
       var rows = (feed.listings || []).filter(function (r) { return r.source !== "facebook"; });
       items.streeteasy = rows.map(function (r, i) {
         r._urgent = isUrgent(r);
-        var it = F.normalize(r, "streeteasy", i);
+        var it = F.normalize(r, r.source || "streeteasy", i);
         it.st = F.statusFor(r, statuses);
         return it;
       });

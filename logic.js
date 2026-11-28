@@ -39,6 +39,16 @@
     };
   };
 
+  // Listing sites: the name shown on cards and the only host their links may point to.
+  var SOURCES = {
+    streeteasy: { name: "StreetEasy", host: "streeteasy.com" },
+    corcoran: { name: "Corcoran", host: "www.corcoran.com" }
+  };
+  L.sourceInfo = function (source) {
+    var s = Object.prototype.hasOwnProperty.call(SOURCES, source) ? SOURCES[source] : null;
+    return s ? { name: s.name, host: s.host } : null;
+  };
+
   L.availability = function (item, today) {
     if (item.availNow === true) return "now";
     if (item.availDate) return item.availDate <= today ? "now" : item.availDate;
@@ -76,7 +86,8 @@
   }
 
   L.matches = function (item, state, today) {
-    if (state.tab === "streeteasy" && item.source !== "streeteasy") return false;
+    // The "streeteasy" tab id stays for old #streeteasy links; it now holds every listing site.
+    if (state.tab === "streeteasy" && item.source === "building") return false;
     if (state.tab === "buildings" && item.source !== "building") return false;
     if (state.type === "studio" && item.beds !== 0) return false;
     if (state.type === "1br" && item.beds !== 1) return false;

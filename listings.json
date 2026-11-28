@@ -2,6 +2,177 @@
  "checked_at": "2026-11-27T23:06:47+00:00",
  "listings": [
   {
+   "path": "corcoran:111091028",
+   "url": "https://www.corcoran.com/listing/for-rent/777-6th-avenue-1a-manhattan-ny-10001/vow/111091028/regionId/1",
+   "address": "777 6th Avenue #1A",
+   "area": "Chelsea",
+   "rent": 5073,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": null,
+   "listed": "2026-10-01",
+   "walk_min": 17,
+   "no_fee": false,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Pet friendly",
+    "Doorman"
+   ],
+   "photo": "https://media-cloud.corcoranlabs.com/ListingFullAPI/TrestleIdx/532267/42383750",
+   "unknowns": [
+    "size unknown",
+    "available date unknown"
+   ],
+   "first_seen": "2026-11-28",
+   "found_at": "2026-11-28T04:44:47+00:00",
+   "source": "corcoran"
+  },
+  {
+   "path": "corcoran:110963603",
+   "url": "https://www.corcoran.com/listing/for-rent/555-w-23rd-street-s7m-manhattan-ny-10011/vow/110963603/regionId/1",
+   "address": "555 West 23rd Street #S7M",
+   "area": "West Chelsea",
+   "rent": 5500,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": 726,
+   "available": null,
+   "listed": "2026-10-22",
+   "walk_min": 17,
+   "no_fee": false,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Pet friendly",
+    "Doorman"
+   ],
+   "photo": "https://media-cloud.corcoranlabs.com/ListingFullAPI/TrestleIdx/531545/41894098",
+   "unknowns": [
+    "available date unknown",
+    "above $5,200 budget"
+   ],
+   "first_seen": "2026-11-28",
+   "found_at": "2026-11-28T04:44:47+00:00",
+   "source": "corcoran"
+  },
+  {
+   "path": "corcoran:111925778",
+   "url": "https://www.corcoran.com/listing/for-rent/328-w-17th-street-4e-manhattan-ny-10011/vow/111925778/regionId/1",
+   "address": "328 West 17th Street #4E",
+   "area": "Chelsea",
+   "rent": 5495,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": 750,
+   "available": null,
+   "listed": "2026-10-19",
+   "walk_min": 2,
+   "no_fee": false,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Pet friendly",
+    "Washer dryer in unit"
+   ],
+   "photo": "https://media-cloud.corcoranlabs.com/ListingFullAPI/TrestleIdx/531109/41630607",
+   "unknowns": [
+    "available date unknown",
+    "above $5,200 budget"
+   ],
+   "first_seen": "2026-11-28",
+   "found_at": "2026-11-28T04:44:47+00:00",
+   "source": "corcoran"
+  },
+  {
+   "path": "corcoran:111919050",
+   "url": "https://www.corcoran.com/listing/for-rent/181-thompson-street-7-manhattan-ny-10012/vow/111919050/regionId/1",
+   "address": "181 Thompson Street #7",
+   "area": "Greenwich Village",
+   "rent": 3150,
+   "prev_rent": null,
+   "beds": 1,
+   "baths": 1.0,
+   "sqft": null,
+   "available": null,
+   "listed": "2026-11-04",
+   "walk_min": 25,
+   "no_fee": false,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [],
+   "photo": "https://media-cloud.corcoranlabs.com/ListingFullAPI/TrestleIdx/532682/40273355",
+   "unknowns": [
+    "size unknown",
+    "available date unknown"
+   ],
+   "first_seen": "2026-11-28",
+   "found_at": "2026-11-28T04:44:47+00:00",
+   "source": "corcoran"
+  },
+  {
+   "path": "corcoran:23995632",
+   "url": "https://www.corcoran.com/listing/for-rent/455-hudson-street-22-manhattan-ny-10014/23995632/regionId/1",
+   "address": "455 Hudson Street #22",
+   "area": "West Village",
+   "rent": 3895,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-09-05",
+   "listed": "2026-08-24",
+   "walk_min": 16,
+   "no_fee": false,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [],
+   "photo": "https://media-cloud.corcoranlabs.com/ListingFullAPI/NewTaxi/10347873/mediarouting.vestahub.com/Media/163054808",
+   "unknowns": [
+    "size unknown"
+   ],
+   "first_seen": "2026-11-28",
+   "found_at": "2026-11-28T04:44:47+00:00",
+   "source": "corcoran"
+  },
+  {
+   "path": "corcoran:23933365",
+   "url": "https://www.corcoran.com/listing/for-rent/2-horatio-street-6e-manhattan-ny-10014/23933365/regionId/1",
+   "address": "2 Horatio Street #6E",
+   "area": "West Village",
+   "rent": 5500,
+   "prev_rent": null,
+   "beds": 0,
+   "baths": 1.0,
+   "sqft": null,
+   "available": "2026-11-01",
+   "listed": "2026-08-05",
+   "walk_min": 4,
+   "no_fee": false,
+   "owner_direct": false,
+   "urgent": false,
+   "amenities": [
+    "Pet friendly",
+    "Doorman",
+    "Concierge",
+    "Elevator",
+    "Through-wall a/c",
+    "Windowed kitchen"
+   ],
+   "photo": "https://media-cloud.corcoranlabs.com/ListingFullAPI/NewTaxi/10342814/mediarouting.vestahub.com/Media/162830611",
+   "unknowns": [
+    "size unknown",
+    "above $5,200 budget"
+   ],
+   "first_seen": "2026-11-28",
+   "found_at": "2026-11-28T04:44:47+00:00",
+   "source": "corcoran"
+  },
+  {
    "path": "/building/the-caroline-60-west-23-street-new_york/627",
    "url": "https://streeteasy.com/building/the-caroline-60-west-23-street-new_york/627",
    "address": "60 West 23rd Street #627",
