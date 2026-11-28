@@ -34,38 +34,6 @@
    "found_at": "2026-11-27T23:11:51+00:00"
   },
   {
-   "path": "/building/the-murray-hill/1910",
-   "url": "https://streeteasy.com/building/the-murray-hill/1910",
-   "address": "115 East 34th Street #1910",
-   "area": "Murray Hill",
-   "rent": 5295,
-   "prev_rent": null,
-   "beds": 1,
-   "baths": 1.0,
-   "sqft": null,
-   "available": "2026-10-19",
-   "listed": "2026-10-19",
-   "walk_min": 34,
-   "no_fee": null,
-   "owner_direct": false,
-   "urgent": false,
-   "amenities": [
-    "Private outdoor space",
-    "Dishwasher",
-    "Fireplace",
-    "Bike room",
-    "Concierge",
-    "Shared outdoor space"
-   ],
-   "photo": "https://photos.zillowstatic.com/fp/f922026f40918071de93d16d12600c55-p_e.webp",
-   "unknowns": [
-    "size unknown",
-    "no-fee status unknown"
-   ],
-   "first_seen": "2026-11-27",
-   "found_at": "2026-11-27T23:11:51+00:00"
-  },
-  {
    "path": "/building/124-east-24-street-new_york/1d",
    "url": "https://streeteasy.com/building/124-east-24-street-new_york/1d",
    "address": "124 East 24th Street #1D",
@@ -555,38 +523,6 @@
     "Doorman"
    ],
    "photo": "https://photos.zillowstatic.com/fp/6c3d29ba1ab07dfce14f5b51cc6bc505-p_e.webp",
-   "unknowns": [
-    "size unknown",
-    "no-fee status unknown"
-   ],
-   "first_seen": "2026-11-25",
-   "found_at": "2026-11-25T14:12:20+00:00"
-  },
-  {
-   "path": "/building/355-east-86-street/304",
-   "url": "https://streeteasy.com/building/355-east-86-street/304",
-   "address": "355 East 86th Street #304",
-   "area": "Yorkville",
-   "rent": 5515,
-   "prev_rent": null,
-   "beds": 0,
-   "baths": 1.0,
-   "sqft": null,
-   "available": "2026-12-01",
-   "listed": "2026-11-13",
-   "walk_min": 95,
-   "no_fee": null,
-   "owner_direct": false,
-   "urgent": false,
-   "amenities": [
-    "Central ac",
-    "View",
-    "Dishwasher",
-    "Hardwood floors",
-    "Washer dryer",
-    "Bike room"
-   ],
-   "photo": "https://photos.zillowstatic.com/fp/73073c7add031696e3f062ef09fbf3be-p_e.webp",
    "unknowns": [
     "size unknown",
     "no-fee status unknown"
@@ -1754,38 +1690,6 @@
     "Elevator"
    ],
    "photo": "https://photos.zillowstatic.com/fp/16be35754f96aa24d8325b99e693e993-p_e.webp",
-   "unknowns": [
-    "size unknown",
-    "no-fee status unknown"
-   ],
-   "first_seen": "2026-11-24",
-   "found_at": "2026-11-24T23:12:11+00:00"
-  },
-  {
-   "path": "/building/296-elizabeth-street-new_york/5r",
-   "url": "https://streeteasy.com/building/296-elizabeth-street-new_york/5r",
-   "address": "296 Elizabeth Street #5R",
-   "area": "Noho",
-   "rent": 5500,
-   "prev_rent": null,
-   "beds": 0,
-   "baths": 1.0,
-   "sqft": null,
-   "available": "2026-11-08",
-   "listed": "2026-09-04",
-   "walk_min": 34,
-   "no_fee": null,
-   "owner_direct": false,
-   "urgent": false,
-   "amenities": [
-    "Central ac",
-    "Dishwasher",
-    "Hardwood floors",
-    "Loft",
-    "View",
-    "Private outdoor space"
-   ],
-   "photo": "https://photos.zillowstatic.com/fp/07fa211b1ed07d0a8234d0ac700b1cb4-p_e.webp",
    "unknowns": [
     "size unknown",
     "no-fee status unknown"
@@ -3021,38 +2925,6 @@
    "found_at": "2026-11-24T14:14:28+00:00"
   },
   {
-   "path": "/building/1998-2nd-avenue-new_york/3l",
-   "url": "https://streeteasy.com/building/1998-2nd-avenue-new_york/3l",
-   "address": "1998 2nd Avenue #3L",
-   "area": "East Harlem",
-   "rent": 3295,
-   "prev_rent": null,
-   "beds": 0,
-   "baths": 1.0,
-   "sqft": null,
-   "available": "2026-12-01",
-   "listed": "2026-11-09",
-   "walk_min": 109,
-   "no_fee": null,
-   "owner_direct": false,
-   "urgent": false,
-   "amenities": [
-    "Central ac",
-    "Dishwasher",
-    "Hardwood floors",
-    "Washer dryer",
-    "Bike room",
-    "Storage space"
-   ],
-   "photo": "https://photos.zillowstatic.com/fp/83aee5ec65a8806f5152eccc578f999d-p_e.webp",
-   "unknowns": [
-    "size unknown",
-    "no-fee status unknown"
-   ],
-   "first_seen": "2026-11-24",
-   "found_at": "2026-11-24T14:14:28+00:00"
-  },
-  {
    "path": "/building/255-west-14-street-new_york/2e",
    "url": "https://streeteasy.com/building/255-west-14-street-new_york/2e",
    "address": "255 West 14th Street #2E",
@@ -3357,38 +3229,6 @@
    ],
    "photo": "https://photos.zillowstatic.com/fp/b1da70c38b9a04b03996918d6723cbec-p_e.webp",
    "unknowns": [
-    "no-fee status unknown"
-   ],
-   "first_seen": "2026-11-24",
-   "found_at": "2026-11-24T14:14:28+00:00"
-  },
-  {
-   "path": "/building/1998-2nd-avenue-new_york/11k",
-   "url": "https://streeteasy.com/building/1998-2nd-avenue-new_york/11k",
-   "address": "1998 2nd Avenue #11K",
-   "area": "East Harlem",
-   "rent": 3850,
-   "prev_rent": null,
-   "beds": 1,
-   "baths": 1.0,
-   "sqft": null,
-   "available": "2026-12-15",
-   "listed": "2026-11-19",
-   "walk_min": 109,
-   "no_fee": null,
-   "owner_direct": false,
-   "urgent": false,
-   "amenities": [
-    "Central ac",
-    "Dishwasher",
-    "Hardwood floors",
-    "Washer dryer",
-    "Bike room",
-    "Storage space"
-   ],
-   "photo": "https://photos.zillowstatic.com/fp/83aee5ec65a8806f5152eccc578f999d-p_e.webp",
-   "unknowns": [
-    "size unknown",
     "no-fee status unknown"
    ],
    "first_seen": "2026-11-24",
@@ -4542,38 +4382,6 @@
    ],
    "first_seen": "2026-11-24",
    "found_at": "2026-11-24T14:14:28+00:00"
-  },
-  {
-   "path": "/building/summit-nyc/30c",
-   "url": "https://streeteasy.com/building/summit-nyc/30c",
-   "address": "222 East 44th Street #30C",
-   "area": "Turtle Bay",
-   "rent": 5435,
-   "prev_rent": null,
-   "beds": 0,
-   "baths": 1.0,
-   "sqft": null,
-   "available": "2026-11-12",
-   "listed": "2026-11-12",
-   "walk_min": 47,
-   "no_fee": null,
-   "owner_direct": false,
-   "urgent": false,
-   "amenities": [
-    "Central ac",
-    "View",
-    "Dishwasher",
-    "Hardwood floors",
-    "Washer dryer",
-    "Bike room"
-   ],
-   "photo": "https://photos.zillowstatic.com/fp/0b6712c25690e32d9a367a5e8cd4198f-p_e.webp",
-   "unknowns": [
-    "size unknown",
-    "no-fee status unknown"
-   ],
-   "first_seen": "2026-11-23",
-   "found_at": "2026-11-23T23:11:55+00:00"
   },
   {
    "path": "/building/3-eleven/1118",
